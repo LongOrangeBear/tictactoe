@@ -1,10 +1,14 @@
-export type ThemeId = 'classic' | 'hearts' | 'flowers' | 'stars';
+export type ThemeId = 'love' | 'star' | 'nature' | 'night';
 
 export interface Theme {
     id: ThemeId;
     name: string;
     nameRu: string;
     symbols: {
+        player: string;
+        computer: string;
+    };
+    symbolIcons: {
         player: string;
         computer: string;
     };
@@ -23,114 +27,150 @@ export interface Theme {
         cellBgHover: string;
         cellBorder: string;
         winHighlight: string;
+        glow: string;
+        bgStart: string;
+        bgMid: string;
+        bgEnd: string;
     };
     emoji: string;
 }
 
 export const themes: Record<ThemeId, Theme> = {
-    classic: {
-        id: 'classic',
-        name: 'Classic',
-        nameRu: 'Классика',
+    love: {
+        id: 'love',
+        name: 'Love',
+        nameRu: 'Любовь',
         symbols: {
-            player: '✕',
-            computer: '○',
-        },
-        colors: {
-            primary: '#6b7280',
-            secondary: '#9ca3af',
-            accent: '#374151',
-            background: '#f8fafc',
-            backgroundGradient: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
-            cardBg: 'rgba(255, 255, 255, 0.9)',
-            text: '#1f2937',
-            textMuted: '#6b7280',
-            playerColor: '#374151',
-            computerColor: '#6b7280',
-            cellBg: 'rgba(255, 255, 255, 0.8)',
-            cellBgHover: 'rgba(241, 245, 249, 0.9)',
-            cellBorder: '#e2e8f0',
-            winHighlight: 'rgba(55, 65, 81, 0.1)',
-        },
-        emoji: '🎯',
-    },
-    hearts: {
-        id: 'hearts',
-        name: 'Hearts',
-        nameRu: 'Сердечки',
-        symbols: {
-            player: '💖',
+            player: '❤️',
             computer: '💜',
         },
-        colors: {
-            primary: '#ec4899',
-            secondary: '#a855f7',
-            accent: '#db2777',
-            background: '#fdf2f8',
-            backgroundGradient: 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f5d0fe 100%)',
-            cardBg: 'rgba(255, 255, 255, 0.85)',
-            text: '#831843',
-            textMuted: '#9d174d',
-            playerColor: '#ec4899',
-            computerColor: '#a855f7',
-            cellBg: 'rgba(255, 255, 255, 0.7)',
-            cellBgHover: 'rgba(252, 231, 243, 0.9)',
-            cellBorder: '#fbcfe8',
-            winHighlight: 'rgba(236, 72, 153, 0.15)',
-        },
-        emoji: '💖',
-    },
-    flowers: {
-        id: 'flowers',
-        name: 'Flowers',
-        nameRu: 'Цветочки',
-        symbols: {
-            player: '🌸',
-            computer: '🌿',
+        symbolIcons: {
+            player: '/assets/icons/symbol_x_heart.svg',
+            computer: '/assets/icons/symbol_o_star.svg',
         },
         colors: {
-            primary: '#14b8a6',
-            secondary: '#fb923c',
-            accent: '#f97316',
-            background: '#f0fdfa',
-            backgroundGradient: 'linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #fed7aa 100%)',
+            primary: 'hsl(340, 80%, 60%)',
+            secondary: 'hsl(320, 70%, 70%)',
+            accent: 'hsl(340, 85%, 55%)',
+            background: 'hsl(340, 80%, 95%)',
+            backgroundGradient: 'linear-gradient(135deg, hsl(340, 80%, 95%) 0%, hsl(320, 60%, 92%) 50%, hsl(300, 70%, 94%) 100%)',
             cardBg: 'rgba(255, 255, 255, 0.85)',
-            text: '#134e4a',
-            textMuted: '#0f766e',
-            playerColor: '#14b8a6',
-            computerColor: '#f97316',
+            text: 'hsl(340, 50%, 30%)',
+            textMuted: 'hsl(340, 30%, 40%)',
+            playerColor: 'hsl(340, 80%, 60%)',
+            computerColor: 'hsl(320, 70%, 70%)',
             cellBg: 'rgba(255, 255, 255, 0.7)',
-            cellBgHover: 'rgba(204, 251, 241, 0.9)',
-            cellBorder: '#99f6e4',
-            winHighlight: 'rgba(20, 184, 166, 0.15)',
+            cellBgHover: 'rgba(255, 255, 255, 0.9)',
+            cellBorder: 'rgba(255, 255, 255, 0.5)',
+            winHighlight: 'rgba(255, 100, 130, 0.15)',
+            glow: 'rgba(255, 100, 130, 0.4)',
+            bgStart: 'hsl(340, 80%, 95%)',
+            bgMid: 'hsl(320, 60%, 92%)',
+            bgEnd: 'hsl(300, 70%, 94%)',
         },
-        emoji: '🌸',
+        emoji: '❤️',
     },
-    stars: {
-        id: 'stars',
-        name: 'Stars',
-        nameRu: 'Звёздочки',
+    star: {
+        id: 'star',
+        name: 'Star',
+        nameRu: 'Звёзды',
         symbols: {
             player: '⭐',
             computer: '✨',
         },
+        symbolIcons: {
+            player: '/assets/icons/symbol_x_star.svg',
+            computer: '/assets/icons/symbol_o_sparkle.svg',
+        },
         colors: {
-            primary: '#f59e0b',
-            secondary: '#fbbf24',
-            accent: '#d97706',
-            background: '#fffbeb',
-            backgroundGradient: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%)',
+            primary: 'hsl(45, 90%, 55%)',
+            secondary: 'hsl(35, 85%, 60%)',
+            accent: 'hsl(45, 95%, 50%)',
+            background: 'hsl(45, 80%, 95%)',
+            backgroundGradient: 'linear-gradient(135deg, hsl(45, 80%, 95%) 0%, hsl(35, 70%, 92%) 50%, hsl(25, 60%, 94%) 100%)',
             cardBg: 'rgba(255, 255, 255, 0.85)',
-            text: '#78350f',
-            textMuted: '#92400e',
-            playerColor: '#f59e0b',
-            computerColor: '#d97706',
+            text: 'hsl(45, 50%, 25%)',
+            textMuted: 'hsl(45, 30%, 40%)',
+            playerColor: 'hsl(45, 90%, 55%)',
+            computerColor: 'hsl(35, 85%, 60%)',
             cellBg: 'rgba(255, 255, 255, 0.7)',
-            cellBgHover: 'rgba(254, 243, 199, 0.9)',
-            cellBorder: '#fcd34d',
-            winHighlight: 'rgba(245, 158, 11, 0.15)',
+            cellBgHover: 'rgba(255, 255, 255, 0.9)',
+            cellBorder: 'rgba(255, 255, 255, 0.5)',
+            winHighlight: 'rgba(255, 200, 50, 0.15)',
+            glow: 'rgba(255, 200, 50, 0.4)',
+            bgStart: 'hsl(45, 80%, 95%)',
+            bgMid: 'hsl(35, 70%, 92%)',
+            bgEnd: 'hsl(25, 60%, 94%)',
         },
         emoji: '⭐',
+    },
+    nature: {
+        id: 'nature',
+        name: 'Nature',
+        nameRu: 'Природа',
+        symbols: {
+            player: '🍀',
+            computer: '🌿',
+        },
+        symbolIcons: {
+            player: '/assets/icons/symbol_x_clover.svg',
+            computer: '/assets/icons/symbol_o_leaf.svg',
+        },
+        colors: {
+            primary: 'hsl(140, 60%, 45%)',
+            secondary: 'hsl(160, 50%, 55%)',
+            accent: 'hsl(140, 65%, 40%)',
+            background: 'hsl(140, 60%, 95%)',
+            backgroundGradient: 'linear-gradient(135deg, hsl(140, 60%, 95%) 0%, hsl(160, 50%, 92%) 50%, hsl(120, 40%, 94%) 100%)',
+            cardBg: 'rgba(255, 255, 255, 0.85)',
+            text: 'hsl(140, 50%, 25%)',
+            textMuted: 'hsl(140, 30%, 40%)',
+            playerColor: 'hsl(140, 60%, 45%)',
+            computerColor: 'hsl(160, 50%, 55%)',
+            cellBg: 'rgba(255, 255, 255, 0.7)',
+            cellBgHover: 'rgba(255, 255, 255, 0.9)',
+            cellBorder: 'rgba(255, 255, 255, 0.5)',
+            winHighlight: 'rgba(100, 200, 100, 0.15)',
+            glow: 'rgba(100, 200, 100, 0.4)',
+            bgStart: 'hsl(140, 60%, 95%)',
+            bgMid: 'hsl(160, 50%, 92%)',
+            bgEnd: 'hsl(120, 40%, 94%)',
+        },
+        emoji: '🍀',
+    },
+    night: {
+        id: 'night',
+        name: 'Night',
+        nameRu: 'Ночь',
+        symbols: {
+            player: '🌙',
+            computer: '💫',
+        },
+        symbolIcons: {
+            player: '/assets/icons/symbol_x_moon.svg',
+            computer: '/assets/icons/symbol_o_star.svg',
+        },
+        colors: {
+            primary: 'hsl(260, 60%, 55%)',
+            secondary: 'hsl(240, 50%, 45%)',
+            accent: 'hsl(260, 65%, 50%)',
+            background: 'hsl(260, 40%, 20%)',
+            backgroundGradient: 'linear-gradient(135deg, hsl(260, 40%, 20%) 0%, hsl(240, 35%, 15%) 50%, hsl(280, 30%, 18%) 100%)',
+            cardBg: 'rgba(255, 255, 255, 0.15)',
+            text: 'hsl(260, 20%, 90%)',
+            textMuted: 'hsl(260, 15%, 70%)',
+            playerColor: 'hsl(260, 60%, 70%)',
+            computerColor: 'hsl(240, 50%, 65%)',
+            cellBg: 'rgba(255, 255, 255, 0.1)',
+            cellBgHover: 'rgba(255, 255, 255, 0.2)',
+            cellBorder: 'rgba(255, 255, 255, 0.2)',
+            winHighlight: 'rgba(100, 100, 200, 0.25)',
+            glow: 'rgba(100, 100, 200, 0.4)',
+            bgStart: 'hsl(260, 40%, 20%)',
+            bgMid: 'hsl(240, 35%, 15%)',
+            bgEnd: 'hsl(280, 30%, 18%)',
+        },
+        emoji: '🌙',
     },
 };
 

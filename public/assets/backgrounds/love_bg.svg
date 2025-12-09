@@ -1,0 +1,45 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="heart" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+  </defs>
+  
+  <!-- Base: hsl(340, 80%, 95%) = #FCE4EC -->
+  <rect width="100%" height="100%" fill="#FCE4EC"/>
+  
+  <!-- Gradient overlay -->
+  <rect width="100%" height="100%" fill="url(#loveGrad)"/>
+  <defs>
+    <linearGradient id="loveGrad" x1="0" y1="0" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCE4EC" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#F8BBD9" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F3E5F5" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Hearts: primary hsl(340, 80%, 60%) = #E91E63, secondary hsl(320, 70%, 70%) = #F48FB1 -->
+  
+  <!-- Center Cluster -->
+  <g transform="translate(720, 350) scale(10)" fill="#E91E63" opacity="0.25"><use href="#heart"/></g>
+  <g transform="translate(620, 280) scale(6)" fill="#F48FB1" opacity="0.35"><use href="#heart"/></g>
+  <g transform="translate(820, 420) scale(7)" fill="#E91E63" opacity="0.2"><use href="#heart"/></g>
+  <g transform="translate(680, 450) scale(5)" fill="#F48FB1" opacity="0.3"><use href="#heart"/></g>
+  <g transform="translate(780, 260) scale(5.5)" fill="#E91E63" opacity="0.28"><use href="#heart"/></g>
+
+  <!-- Corners and edges -->
+  <g transform="translate(80, 60) scale(9)" fill="#F48FB1" opacity="0.3"><use href="#heart"/></g>
+  <g transform="translate(1280, 100) scale(11)" fill="#E91E63" opacity="0.22"><use href="#heart"/></g>
+  <g transform="translate(1150, 700) scale(10)" fill="#F48FB1" opacity="0.28"><use href="#heart"/></g>
+  <g transform="translate(40, 650) scale(8)" fill="#E91E63" opacity="0.2"><use href="#heart"/></g>
+  <g transform="translate(350, 120) scale(5)" fill="#F48FB1" opacity="0.32"><use href="#heart"/></g>
+  <g transform="translate(900, 60) scale(4.5)" fill="#E91E63" opacity="0.35"><use href="#heart"/></g>
+  <g transform="translate(550, 780) scale(7)" fill="#F48FB1" opacity="0.25"><use href="#heart"/></g>
+  <g transform="translate(1000, 500) scale(5.5)" fill="#E91E63" opacity="0.3"><use href="#heart"/></g>
+  <g transform="translate(200, 450) scale(4.5)" fill="#F48FB1" opacity="0.28"><use href="#heart"/></g>
+  
+  <!-- Soft glow circles (bottom-right direction) -->
+  <circle cx="900" cy="550" r="180" fill="#FFCDD2" opacity="0.2"/>
+  <circle cx="1100" cy="650" r="130" fill="#F8BBD9" opacity="0.22"/>
+  <circle cx="1300" cy="780" r="150" fill="#FFCDD2" opacity="0.18"/>
+  <circle cx="750" cy="700" r="100" fill="#F8BBD9" opacity="0.2"/>
+  <circle cx="1200" cy="500" r="90" fill="#FFCDD2" opacity="0.18"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="copyGradHD" x1="128" y1="40" x2="128" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D1D5DB"/>
+      <stop offset="100%" stop-color="#6B7280"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Back Page -->
+  <path d="M160 80V60C160 48.9543 151.046 40 140 40H60C48.9543 40 40 48.9543 40 60V140C40 151.046 48.9543 160 60 160H80" 
+        stroke="url(#copyGradHD)" stroke-width="16" stroke-linecap="round"/>
+        
+  <!-- Front Page -->
+  <rect x="80" y="80" width="136" height="136" rx="16" fill="white" stroke="url(#copyGradHD)" stroke-width="16"/>
+  
+  <!-- Lines -->
+  <path d="M112 120H184" stroke="url(#copyGradHD)" stroke-width="12" stroke-linecap="round" opacity="0.5"/>
+  <path d="M112 152H184" stroke="url(#copyGradHD)" stroke-width="12" stroke-linecap="round" opacity="0.5"/>
+  <path d="M112 184H160" stroke="url(#copyGradHD)" stroke-width="12" stroke-linecap="round" opacity="0.5"/>
+</svg>

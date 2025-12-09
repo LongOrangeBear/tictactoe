@@ -1,0 +1,25 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="starOGradientUHD" x1="80" y1="80" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="glowOStarUHD" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Ring -->
+  <circle cx="320" cy="320" r="220" stroke="url(#starOGradientUHD)" stroke-width="40" fill="none" filter="url(#glowOStarUHD)"/>
+  
+  <!-- Sparkles on Ring -->
+  <path d="M320 60L335 90L360 100L335 110L320 140L305 110L280 100L305 90L320 60Z" fill="white"/>
+  <path d="M540 320L550 340L570 350L550 360L540 380L530 360L510 350L530 340L540 320Z" fill="white"/>
+  <path d="M320 500L330 520L350 530L330 540L320 560L310 540L290 530L310 520L320 500Z" fill="white"/>
+  <path d="M100 320L110 340L130 350L110 360L100 380L90 360L70 350L90 340L100 320Z" fill="white"/>
+  
+  <!-- Inner Highlight -->
+  <circle cx="320" cy="320" r="220" stroke="white" stroke-width="4" stroke-dasharray="10 30" stroke-linecap="round" fill="none" opacity="0.6"/>
+</svg>

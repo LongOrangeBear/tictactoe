@@ -26,7 +26,10 @@ export function DrawModal({ isOpen, onPlayAgain }: DrawModalProps) {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    className="fixed inset-0 z-50 flex items-center justify-center p-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4"
+                    style={{
+                        paddingBottom: 'max(1rem, env(safe-area-inset-bottom))',
+                    }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -34,41 +37,67 @@ export function DrawModal({ isOpen, onPlayAgain }: DrawModalProps) {
                     aria-modal="true"
                     aria-labelledby="draw-modal-title"
                 >
+                    {/* Backdrop */}
                     <motion.div
-                        className="absolute inset-0 bg-black/40 backdrop-blur-md"
+                        className="absolute inset-0"
+                        style={{
+                            background: 'rgba(0, 0, 0, 0.4)',
+                            backdropFilter: 'blur(8px)',
+                        }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onPlayAgain}
                     />
 
+                    {/* Modal */}
                     <motion.div
-                        className="relative w-full max-w-sm mx-4 p-6 rounded-3xl text-center overflow-hidden glass-card"
+                        className="relative text-center"
                         style={{
-                            maxWidth: 'min(24rem, calc(100vw - 3rem))',
-                            boxShadow: '0 30px 80px -12px rgba(0,0,0,0.25)',
+                            width: 'min(90vw, 380px)',
+                            background: 'rgba(255, 255, 255, 0.85)',
+                            backdropFilter: 'blur(24px) saturate(180%)',
+                            borderRadius: '28px',
+                            padding: '32px 24px',
+                            border: '1px solid rgba(255, 255, 255, 0.5)',
+                            boxShadow: '0 24px 64px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.4) inset',
+                            overflow: 'hidden',
                         }}
-                        initial={{ scale: 0.8, opacity: 0, y: 30 }}
+                        initial={{ scale: 0.9, opacity: 0, y: 20 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
-                        exit={{ scale: 0.8, opacity: 0, y: 30 }}
+                        exit={{ scale: 0.9, opacity: 0, y: 20 }}
                         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                     >
+                        {/* Emoji */}
                         <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.2, type: 'spring' }}
-                            className="text-5xl sm:text-6xl mb-4 drop-shadow-lg"
+                            style={{ fontSize: '56px', marginBottom: '16px' }}
                         >
-                            🤝
+                            <motion.span
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ delay: 0.3, duration: 0.6 }}
+                            >
+                                🤝
+                            </motion.span>
                         </motion.div>
 
+                        {/* Title with gradient */}
                         <motion.h2
                             id="draw-modal-title"
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
-                            className="text-2xl sm:text-3xl font-bold mb-2"
-                            style={{ color: theme.colors.text }}
+                            style={{
+                                fontSize: '28px',
+                                fontWeight: 700,
+                                background: `linear-gradient(135deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`,
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                backgroundClip: 'text',
+                                marginBottom: '12px',
+                            }}
                         >
                             Ничья!
                         </motion.h2>
@@ -77,23 +106,38 @@ export function DrawModal({ isOpen, onPlayAgain }: DrawModalProps) {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="text-sm sm:text-base mb-6"
-                            style={{ color: theme.colors.textMuted }}
+                            style={{
+                                fontSize: '14px',
+                                marginBottom: '24px',
+                                color: theme.colors.textMuted,
+                            }}
                         >
                             Достойная партия! Сыграем ещё разок? 🎮
                         </motion.p>
 
+                        {/* Primary button */}
                         <motion.button
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
                             onClick={onPlayAgain}
-                            className="w-full py-3.5 px-6 rounded-2xl font-bold text-white text-base transition-all duration-200 min-h-[48px] btn-shimmer"
+                            className="btn-shimmer"
                             style={{
+                                width: '100%',
+                                padding: '16px',
                                 background: `linear-gradient(135deg, ${theme.colors.primary}, ${theme.colors.secondary})`,
-                                boxShadow: `0 8px 30px ${theme.colors.primary}40`,
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '16px',
+                                fontSize: '16px',
+                                fontWeight: 700,
+                                cursor: 'pointer',
+                                boxShadow: `0 8px 24px ${theme.colors.primary}40, 0 0 0 1px rgba(255, 255, 255, 0.2) inset`,
                             }}
-                            whileHover={{ scale: 1.02, boxShadow: `0 12px 40px ${theme.colors.primary}50` }}
+                            whileHover={{
+                                y: -2,
+                                boxShadow: `0 12px 32px ${theme.colors.primary}50, 0 0 0 1px rgba(255, 255, 255, 0.3) inset`
+                            }}
                             whileTap={{ scale: 0.98 }}
                         >
                             Сыграть ещё раз

@@ -1,0 +1,33 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glass Gradient - reduced opacity -->
+    <linearGradient id="themePanelGrad" x1="0" y1="0" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="white" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.03"/>
+    </linearGradient>
+    
+    <!-- Border Gradient -->
+    <linearGradient id="themePanelBorder" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="white" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.4"/>
+    </linearGradient>
+    
+    <!-- Stronger Shadow Filter -->
+    <filter id="themePanelShadow" x="-15%" y="-30%" width="130%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <rect width="1200" height="300" rx="100" fill="transparent" filter="url(#themePanelShadow)"/>
+  
+  <!-- Main Glass Body -->
+  <rect width="1200" height="300" rx="100" fill="url(#themePanelGrad)"/>
+  
+  <!-- Border -->
+  <rect width="1200" height="300" rx="100" stroke="url(#themePanelBorder)" stroke-width="3" fill="none"/>
+  
+  <!-- Inner Highlight -->
+  <rect x="8" y="8" width="1184" height="284" rx="92" stroke="white" stroke-opacity="0.15" stroke-width="2" fill="none"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="botGrad" x1="128" y1="40" x2="128" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="botGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2563EB" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <g filter="url(#botGlow)">
+    <!-- Head -->
+    <rect x="64" y="80" width="128" height="112" rx="24" fill="url(#botGrad)"/>
+    
+    <!-- Eyes -->
+    <rect x="88" y="112" width="32" height="32" rx="8" fill="white"/>
+    <rect x="136" y="112" width="32" height="32" rx="8" fill="white"/>
+    <circle cx="104" cy="128" r="6" fill="#2563EB"/>
+    <circle cx="152" cy="128" r="6" fill="#2563EB"/>
+    
+    <!-- Antenna -->
+    <path d="M128 80V48" stroke="url(#botGrad)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="128" cy="40" r="12" fill="#EF4444"/>
+    
+    <!-- Ears -->
+    <path d="M64 120H48C43.5817 120 40 123.582 40 128V144C40 148.418 43.5817 152 48 152H64" fill="url(#botGrad)"/>
+    <path d="M192 120H208C212.418 120 216 123.582 216 128V144C216 148.418 212.418 152 208 152H192" fill="url(#botGrad)"/>
+  </g>
+</svg>

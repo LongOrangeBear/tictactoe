@@ -1,0 +1,12 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="homeGrad" x1="128" y1="40" x2="128" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  
+  <path d="M40 112L128 40L216 112V200C216 208.837 208.837 216 200 216H152V144H104V216H56C47.1634 216 40 208.837 40 200V112Z" 
+        fill="url(#homeGrad)" stroke="url(#homeGrad)" stroke-width="16" stroke-linejoin="round"/>
+  <path d="M104 216V144H152V216" stroke="white" stroke-width="8" stroke-opacity="0.3"/>
+</svg>

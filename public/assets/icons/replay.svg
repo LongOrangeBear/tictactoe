@@ -1,0 +1,13 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="replayGrad" x1="128" y1="40" x2="128" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  
+  <path d="M128 64V24L208 88L128 152V112C83.8172 112 48 147.817 48 192C48 205.6 51.4 218.4 57.4 229.6" 
+        stroke="url(#replayGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M208 192C208 168 197.6 146.4 180.8 131.2" 
+        stroke="url(#replayGrad)" stroke-width="24" stroke-linecap="round" stroke-opacity="0.4"/>
+</svg>

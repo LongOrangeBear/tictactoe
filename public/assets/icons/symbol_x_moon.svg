@@ -1,0 +1,25 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nightXGradientUHD" x1="160" y1="160" x2="480" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DDD6FE"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glowXNightUHD" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <g filter="url(#glowXNightUHD)">
+    <!-- Crescent 1 (Top-Left to Bottom-Right) -->
+    <path d="M400 120C360 120 320 144 288 192C256 240 256 304 304 368C352 432 416 448 448 432C416 496 320 520 224 464C128 416 112 288 176 192C240 96 352 64 400 120Z" 
+          fill="url(#nightXGradientUHD)"/>
+          
+    <!-- Crescent 2 (Top-Right to Bottom-Left) - Flipped -->
+    <path d="M240 120C280 120 320 144 352 192C384 240 384 304 336 368C288 432 224 448 192 432C224 496 320 520 416 464C512 416 528 288 464 192C400 96 288 64 240 120Z" 
+          fill="url(#nightXGradientUHD)"/>
+  </g>
+  
+  <!-- Center Star -->
+  <path d="M320 280L330 310L360 320L330 330L320 360L310 330L280 320L310 310L320 280Z" fill="white"/>
+</svg>

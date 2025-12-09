@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SoundProvider } from "@/components/providers/SoundProvider";
+import { Background } from "@/components/ui/Background";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -36,10 +37,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`} suppressHydrationWarning>
         <ThemeProvider>
           <SoundProvider>
-            <div className="bg-pattern" />
+            <Background />
+
             <main className="relative z-10">
               {children}
             </main>

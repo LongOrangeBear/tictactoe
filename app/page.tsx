@@ -6,10 +6,8 @@ import { useGame } from '@/hooks/useGame';
 import { usePlayerName } from '@/hooks/usePlayerName';
 import { Board } from '@/components/game/Board';
 import { GameStatus } from '@/components/game/GameStatus';
-import { Statistics } from '@/components/ui/Statistics';
+import { HeaderPanel } from '@/components/ui/HeaderPanel';
 import { ThemeSwitcher } from '@/components/ui/ThemeSwitcher';
-import { SoundToggle } from '@/components/ui/SoundToggle';
-import { PlayerNameDisplay } from '@/components/ui/PlayerNameDisplay';
 import { WinModal } from '@/components/modals/WinModal';
 import { LoseModal } from '@/components/modals/LoseModal';
 import { DrawModal } from '@/components/modals/DrawModal';
@@ -17,7 +15,7 @@ import { WelcomeModal } from '@/components/modals/WelcomeModal';
 
 export default function Home() {
   const { theme } = useTheme();
-  const { name, isLoading, hasName, saveName } = usePlayerName();
+  const { name, isLoading, hasName, saveName, clearName } = usePlayerName();
   const {
     board,
     isPlayerTurn,
@@ -28,7 +26,6 @@ export default function Home() {
     stats,
     makeMove,
     resetGame,
-    resetStats,
   } = useGame(name);
 
   if (isLoading) {
@@ -47,74 +44,45 @@ export default function Home() {
 
   return (
     <div
-      className="min-h-screen min-h-dvh flex flex-col items-center px-4 py-4 sm:py-6 relative z-10 overflow-y-auto"
+      className="min-h-screen min-h-dvh flex flex-col items-center justify-start relative z-10"
       style={{
-        paddingTop: 'max(1rem, env(safe-area-inset-top))',
-        paddingBottom: 'max(1rem, env(safe-area-inset-bottom))',
+        paddingTop: 'max(12px, env(safe-area-inset-top))',
+        paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
       }}
     >
-      <SoundToggle />
       <WelcomeModal isOpen={!hasName} onSubmit={saveName} />
 
-      {/* Header - compact */}
-      <motion.header
-        className="text-center mb-3 w-full max-w-sm"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <h1
-          className="text-2xl sm:text-3xl font-bold mb-1"
-          style={{
-            backgroundImage: `linear-gradient(90deg, ${theme.colors.primary}, ${theme.colors.secondary}, ${theme.colors.accent})`,
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >
-          Крестики-Нолики
-        </h1>
-        <p className="text-xs sm:text-sm" style={{ color: theme.colors.textMuted }}>
-          Победите и получите промокод! 🎁
-        </p>
-      </motion.header>
+      {/* Top section: Header + Theme + Status + Board */}
+      <div className="w-full flex flex-col items-center gap-2 md:gap-4 md:pt-4">
+        {/* Header Panel - includes name, stats, telegram */}
+        {hasName && name && (
+          <HeaderPanel
+            playerName={name}
+            wins={stats.wins}
+            losses={stats.losses}
+            draws={stats.draws}
+            onNameClick={clearName}
+          />
+        )}
 
-      {/* Player Name */}
-      {hasName && name && <PlayerNameDisplay name={name} onEdit={saveName} />}
+        {/* Theme Switcher */}
+        <ThemeSwitcher />
 
-      {/* Theme Switcher */}
-      <ThemeSwitcher />
+        {/* Game Status - under theme switcher */}
+        {!result && (
+          <GameStatus isPlayerTurn={isPlayerTurn} isProcessing={isProcessing} />
+        )}
 
-      {/* Game Status */}
-      {!result && <GameStatus isPlayerTurn={isPlayerTurn} isProcessing={isProcessing} />}
-
-      {/* Game Board */}
-      <Board
-        board={board}
-        winningLine={winningLine}
-        disabled={!isPlayerTurn || result !== null || isProcessing}
-        onCellClick={makeMove}
-      />
-
-      {/* Statistics */}
-      <Statistics stats={stats} onReset={resetStats} />
-
-      {/* Telegram Link */}
-      <motion.a
-        href="https://t.me/tictactoepromo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-3 flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium glass-card"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
-        style={{ color: theme.colors.text }}
-      >
-        <span>📢</span>
-        <span>Telegram</span>
-      </motion.a>
+        {/* Game Board - under status, pushed down on mobile */}
+        <div className="mt-8 md:mt-0">
+          <Board
+            board={board}
+            winningLine={winningLine}
+            disabled={!isPlayerTurn || result !== null || isProcessing}
+            onCellClick={makeMove}
+          />
+        </div>
+      </div>
 
       {/* Modals */}
       <WinModal isOpen={result === 'win'} promoCode={promoCode || ''} onPlayAgain={resetGame} />

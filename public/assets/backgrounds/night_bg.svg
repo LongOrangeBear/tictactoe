@@ -1,0 +1,61 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="moon" d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 18c-4.41 0-8-3.59-8-8s3.59-8 8-8c.46 0 .91.05 1.34.12-2.38 1.46-4.04 4.03-4.28 7.02-.03.36-.06.73-.06 1.1 0 3.31 1.86 6.18 4.6 7.74-.51.01-1.05.02-1.6.02z"/>
+    <linearGradient id="nightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A2E" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#16213E" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1E1E3F" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Base: hsl(260, 40%, 20%) = #1A1A2E (dark purple) -->
+  <rect width="100%" height="100%" fill="#0F0F1A"/>
+  
+  <!-- Gradient overlay -->
+  <rect width="100%" height="100%" fill="url(#nightGrad)"/>
+  
+  <!-- Moons: primary hsl(260, 60%, 55%) = #7C4DFF, secondary hsl(240, 50%, 45%) = #5C6BC0 -->
+  
+  <!-- Center Cluster -->
+  <g transform="translate(720, 350) scale(7)" fill="#7C4DFF" opacity="0.3"><use href="#moon"/></g>
+  <g transform="translate(640, 290) scale(4)" fill="#5C6BC0" opacity="0.35"><use href="#moon"/></g>
+  <g transform="translate(810, 400) scale(5)" fill="#7C4DFF" opacity="0.25"><use href="#moon"/></g>
+  <g transform="translate(690, 430) scale(3)" fill="#5C6BC0" opacity="0.32"><use href="#moon"/></g>
+  <g transform="translate(770, 270) scale(4)" fill="#7C4DFF" opacity="0.28"><use href="#moon"/></g>
+
+  <!-- Corners and edges -->
+  <g transform="translate(150, 100) scale(6)" fill="#5C6BC0" opacity="0.25"><use href="#moon"/></g>
+  <g transform="translate(1200, 120) scale(8)" fill="#7C4DFF" opacity="0.2"><use href="#moon"/></g>
+  <g transform="translate(1100, 680) scale(7)" fill="#5C6BC0" opacity="0.22"><use href="#moon"/></g>
+  <g transform="translate(80, 620) scale(5)" fill="#7C4DFF" opacity="0.22"><use href="#moon"/></g>
+  <g transform="translate(400, 140) scale(3.5)" fill="#5C6BC0" opacity="0.28"><use href="#moon"/></g>
+  <g transform="translate(950, 80) scale(3)" fill="#7C4DFF" opacity="0.3"><use href="#moon"/></g>
+  <g transform="translate(540, 750) scale(5)" fill="#5C6BC0" opacity="0.22"><use href="#moon"/></g>
+  <g transform="translate(980, 480) scale(4)" fill="#7C4DFF" opacity="0.25"><use href="#moon"/></g>
+  
+  <!-- Stars scattered across the sky -->
+  <circle cx="100" cy="80" r="1.5" fill="#FFF" opacity="0.8"/>
+  <circle cx="250" cy="150" r="2" fill="#FFF" opacity="0.6"/>
+  <circle cx="400" cy="60" r="1" fill="#FFF" opacity="0.9"/>
+  <circle cx="550" cy="120" r="1.5" fill="#FFF" opacity="0.7"/>
+  <circle cx="700" cy="50" r="2" fill="#FFF" opacity="0.65"/>
+  <circle cx="850" cy="100" r="1" fill="#FFF" opacity="0.85"/>
+  <circle cx="1000" cy="70" r="1.5" fill="#FFF" opacity="0.75"/>
+  <circle cx="1150" cy="130" r="2" fill="#FFF" opacity="0.6"/>
+  <circle cx="1300" cy="60" r="1" fill="#FFF" opacity="0.9"/>
+  <circle cx="150" cy="300" r="1.5" fill="#FFF" opacity="0.7"/>
+  <circle cx="1350" cy="350" r="2" fill="#FFF" opacity="0.65"/>
+  <circle cx="80" cy="500" r="1" fill="#FFF" opacity="0.8"/>
+  <circle cx="1380" cy="550" r="1.5" fill="#FFF" opacity="0.75"/>
+  <circle cx="120" cy="750" r="2" fill="#FFF" opacity="0.6"/>
+  <circle cx="300" cy="800" r="1" fill="#FFF" opacity="0.85"/>
+  <circle cx="600" cy="850" r="1.5" fill="#FFF" opacity="0.7"/>
+  <circle cx="900" cy="820" r="2" fill="#FFF" opacity="0.65"/>
+  <circle cx="1200" cy="780" r="1" fill="#FFF" opacity="0.8"/>
+  <circle cx="1350" cy="700" r="1.5" fill="#FFF" opacity="0.75"/>
+  
+  <!-- Soft glow (bottom-right direction) -->
+  <circle cx="900" cy="550" r="200" fill="#7C4DFF" opacity="0.08"/>
+  <circle cx="1100" cy="650" r="130" fill="#5C6BC0" opacity="0.06"/>
+  <circle cx="1300" cy="780" r="150" fill="#7C4DFF" opacity="0.07"/>
+</svg>

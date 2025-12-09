@@ -14,7 +14,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 const STORAGE_KEY = 'tictactoe-theme';
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    const [themeId, setThemeId] = useState<ThemeId>('hearts');
+    const [themeId, setThemeId] = useState<ThemeId>('love');
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -29,13 +29,19 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         if (mounted) {
             localStorage.setItem(STORAGE_KEY, themeId);
 
-            // Apply CSS variables to document
+            // Apply CSS variables and data-theme to document
             const theme = themes[themeId];
             const root = document.documentElement;
+
+            // Set data-theme attribute for CSS selectors
+            root.setAttribute('data-theme', themeId);
 
             Object.entries(theme.colors).forEach(([key, value]) => {
                 root.style.setProperty(`--color-${key}`, value);
             });
+
+            // Apply background gradient to body
+            // document.body.style.background = theme.colors.backgroundGradient;
         }
     }, [themeId, mounted]);
 
@@ -52,7 +58,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     // Prevent hydration mismatch
     if (!mounted) {
         return (
-            <ThemeContext.Provider value={{ ...value, theme: themes['hearts'] }}>
+            <ThemeContext.Provider value={{ ...value, theme: themes['love'] }}>
                 {children}
             </ThemeContext.Provider>
         );

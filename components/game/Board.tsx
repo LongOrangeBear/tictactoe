@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Cell } from './Cell';
 import { Board as BoardType, WinningLine } from '@/lib/game-logic';
-import { useTheme } from '@/components/providers/ThemeProvider';
+import styles from './Board.module.css';
 
 interface BoardProps {
     board: BoardType;
@@ -13,23 +13,20 @@ interface BoardProps {
 }
 
 export function Board({ board, winningLine, disabled, onCellClick }: BoardProps) {
-    const { theme } = useTheme();
-
     const isWinningCell = (index: number): boolean => {
         return winningLine?.indices.includes(index) ?? false;
     };
 
     return (
         <motion.div
-            className="w-full mx-auto p-3 rounded-2xl glass-card"
-            style={{ maxWidth: 'min(280px, calc(100vw - 2rem))' }}
+            className={styles.boardContainer}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             role="grid"
             aria-label="Игровое поле"
         >
-            <div className="grid grid-cols-3 gap-2" role="row">
+            <div className={styles.board} role="row">
                 {board.map((cell, index) => (
                     <Cell
                         key={index}
@@ -44,3 +41,4 @@ export function Board({ board, winningLine, disabled, onCellClick }: BoardProps)
         </motion.div>
     );
 }
+

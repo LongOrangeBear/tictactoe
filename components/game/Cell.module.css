@@ -1,0 +1,52 @@
+.cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    transition: all 0.2s;
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.cell.filled:not(.winning):hover {
+    transform: none;
+}
+
+.winning {
+    animation: winPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes winPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+        filter: brightness(1.1);
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .cell {
+        border-radius: 20px;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+}

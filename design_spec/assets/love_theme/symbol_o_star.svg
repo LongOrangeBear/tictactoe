@@ -1,0 +1,26 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="loveOGradientUHD" x1="320" y1="40" x2="320" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBCFE8"/>
+      <stop offset="50%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+    <filter id="glowOLoveUHD" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Rounded Star Shape -->
+  <g filter="url(#glowOLoveUHD)">
+    <path d="M320 80L360 240L520 260L400 360L440 520L320 440L200 520L240 360L120 260L280 240L320 80Z" 
+          stroke="url(#loveOGradientUHD)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- Inner Highlight Line -->
+  <path d="M320 80L360 240L520 260L400 360L440 520L320 440L200 520L240 360L120 260L280 240L320 80Z" 
+        stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+        
+  <!-- Center Dot -->
+  <circle cx="320" cy="320" r="20" fill="#FBCFE8"/>
+</svg>

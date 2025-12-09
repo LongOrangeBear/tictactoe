@@ -1,0 +1,41 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="leaf" d="M17,8C8,10,5.9,16.17,3.82,21.34L5.71,22l1-2.3A4.49,4.49,0,0,0,8,20C19,20,22,3,22,3,21,5,14,5.25,9,6.25S2,11.5,2,13.5a6.22,6.22,0,0,0,1.75,3.75C7,8,17,8,17,8Z"/>
+    <linearGradient id="natureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E5A35" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#1E4528" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#15351D" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Darker forest green base -->
+  <rect width="100%" height="100%" fill="#1E4528"/>
+  
+  <!-- Gradient overlay diagonal bottom-right -->
+  <rect width="100%" height="100%" fill="url(#natureGrad)"/>
+  
+  <!-- Leaves: lighter greens for contrast -->
+  
+  <!-- Center Cluster -->
+  <g transform="translate(720, 350) scale(9) rotate(15)" fill="#81C784" opacity="0.35"><use href="#leaf"/></g>
+  <g transform="translate(620, 290) scale(5) rotate(-20)" fill="#A5D6A7" opacity="0.4"><use href="#leaf"/></g>
+  <g transform="translate(820, 410) scale(6) rotate(40)" fill="#81C784" opacity="0.3"><use href="#leaf"/></g>
+  <g transform="translate(690, 450) scale(4) rotate(5)" fill="#A5D6A7" opacity="0.38"><use href="#leaf"/></g>
+  <g transform="translate(770, 270) scale(5) rotate(-35)" fill="#81C784" opacity="0.35"><use href="#leaf"/></g>
+
+  <!-- Corners and edges -->
+  <g transform="translate(120, 100) scale(7) rotate(50)" fill="#A5D6A7" opacity="0.3"><use href="#leaf"/></g>
+  <g transform="translate(1220, 80) scale(9) rotate(-25)" fill="#81C784" opacity="0.25"><use href="#leaf"/></g>
+  <g transform="translate(1120, 700) scale(8) rotate(30)" fill="#A5D6A7" opacity="0.28"><use href="#leaf"/></g>
+  <g transform="translate(80, 640) scale(6) rotate(70)" fill="#81C784" opacity="0.26"><use href="#leaf"/></g>
+  <g transform="translate(400, 150) scale(4.5) rotate(-10)" fill="#A5D6A7" opacity="0.35"><use href="#leaf"/></g>
+  <g transform="translate(950, 90) scale(4) rotate(85)" fill="#81C784" opacity="0.32"><use href="#leaf"/></g>
+  <g transform="translate(520, 780) scale(6) rotate(15)" fill="#A5D6A7" opacity="0.28"><use href="#leaf"/></g>
+  <g transform="translate(1000, 500) scale(5) rotate(-45)" fill="#81C784" opacity="0.3"><use href="#leaf"/></g>
+  <g transform="translate(240, 430) scale(4) rotate(60)" fill="#A5D6A7" opacity="0.3"><use href="#leaf"/></g>
+  
+  <!-- Soft glow circles (bottom-right direction) -->
+  <circle cx="900" cy="550" r="180" fill="#4CAF50" opacity="0.1"/>
+  <circle cx="1100" cy="650" r="120" fill="#66BB6A" opacity="0.08"/>
+  <circle cx="1300" cy="780" r="140" fill="#4CAF50" opacity="0.08"/>
+</svg>

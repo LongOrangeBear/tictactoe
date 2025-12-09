@@ -1,0 +1,41 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="star" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A84A" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#B8923A" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#9A7B30" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Darker golden base -->
+  <rect width="100%" height="100%" fill="#C4983A"/>
+  
+  <!-- Gradient overlay diagonal bottom-right -->
+  <rect width="100%" height="100%" fill="url(#starGrad)"/>
+  
+  <!-- Stars: lighter gold for contrast -->
+  
+  <!-- Center Cluster -->
+  <g transform="translate(720, 350) scale(9)" fill="#FFD54F" opacity="0.4"><use href="#star"/></g>
+  <g transform="translate(630, 280) scale(5)" fill="#FFECB3" opacity="0.35"><use href="#star"/></g>
+  <g transform="translate(810, 420) scale(6)" fill="#FFD54F" opacity="0.35"><use href="#star"/></g>
+  <g transform="translate(680, 440) scale(4)" fill="#FFECB3" opacity="0.4"><use href="#star"/></g>
+  <g transform="translate(770, 260) scale(5)" fill="#FFD54F" opacity="0.38"><use href="#star"/></g>
+
+  <!-- Corners and edges -->
+  <g transform="translate(100, 80) scale(7)" fill="#FFECB3" opacity="0.3"><use href="#star"/></g>
+  <g transform="translate(1250, 120) scale(9)" fill="#FFD54F" opacity="0.28"><use href="#star"/></g>
+  <g transform="translate(1100, 680) scale(8)" fill="#FFECB3" opacity="0.32"><use href="#star"/></g>
+  <g transform="translate(60, 620) scale(6)" fill="#FFD54F" opacity="0.3"><use href="#star"/></g>
+  <g transform="translate(380, 140) scale(4.5)" fill="#FFECB3" opacity="0.35"><use href="#star"/></g>
+  <g transform="translate(920, 70) scale(4)" fill="#FFD54F" opacity="0.38"><use href="#star"/></g>
+  <g transform="translate(500, 760) scale(6)" fill="#FFECB3" opacity="0.28"><use href="#star"/></g>
+  <g transform="translate(980, 480) scale(5)" fill="#FFD54F" opacity="0.32"><use href="#star"/></g>
+  <g transform="translate(220, 420) scale(4)" fill="#FFECB3" opacity="0.3"><use href="#star"/></g>
+  
+  <!-- Soft glow circles (bottom-right direction) -->
+  <circle cx="900" cy="550" r="180" fill="#FFE082" opacity="0.15"/>
+  <circle cx="1100" cy="650" r="120" fill="#FFCC80" opacity="0.12"/>
+  <circle cx="1300" cy="780" r="140" fill="#FFE082" opacity="0.1"/>
+</svg>

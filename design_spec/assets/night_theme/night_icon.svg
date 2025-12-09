@@ -1,0 +1,38 @@
+<svg width="448" height="448" viewBox="0 0 448 448" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nightGradientUHD" x1="100" y1="100" x2="348" y2="348" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    <filter id="nightGlowUHD" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <radialGradient id="craterGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.5 0.5) scale(1)">
+      <stop offset="0%" stop-color="#4C1D95" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4C1D95" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main Moon Shape -->
+  <path d="M304 96C272 96 240 112 224 144C208 176 208 224 240 272C272 320 320 336 352 320C320 368 256 384 192 352C128 320 112 240 144 176C176 112 256 80 304 96Z" 
+        fill="url(#nightGradientUHD)" filter="url(#nightGlowUHD)"/>
+        
+  <!-- Craters -->
+  <circle cx="200" cy="200" r="16" fill="#6D28D9" fill-opacity="0.5"/>
+  <circle cx="200" cy="200" r="14" fill="#5B21B6" fill-opacity="0.3"/>
+  
+  <circle cx="240" cy="300" r="24" fill="#6D28D9" fill-opacity="0.5"/>
+  <circle cx="240" cy="300" r="20" fill="#5B21B6" fill-opacity="0.3"/>
+  
+  <circle cx="160" cy="260" r="12" fill="#6D28D9" fill-opacity="0.5"/>
+
+  <!-- Stars -->
+  <g fill="white">
+    <path d="M368 128L372 140L384 144L372 148L368 160L364 148L352 144L364 140L368 128Z"/>
+    <path d="M128 320L130 328L138 330L130 332L128 340L126 332L118 330L126 328L128 320Z"/>
+    <circle cx="300" cy="60" r="4" opacity="0.8"/>
+    <circle cx="80" cy="200" r="3" opacity="0.6"/>
+  </g>
+</svg>

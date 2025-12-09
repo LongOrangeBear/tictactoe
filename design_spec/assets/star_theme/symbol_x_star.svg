@@ -1,0 +1,26 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="starXGradientUHD" x1="320" y1="40" x2="320" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="glowXStarUHD" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <g filter="url(#glowXStarUHD)">
+    <!-- Star Shape X -->
+    <path d="M320 80L380 240L560 260L420 380L460 560L320 460L180 560L220 380L80 260L260 240L320 80Z" 
+          fill="url(#starXGradientUHD)"/>
+  </g>
+  
+  <!-- Inner Detail Lines -->
+  <path d="M320 80L320 460" stroke="#FEF3C7" stroke-width="4" opacity="0.5"/>
+  <path d="M560 260L180 560" stroke="#FEF3C7" stroke-width="4" opacity="0.5"/>
+  <path d="M80 260L460 560" stroke="#FEF3C7" stroke-width="4" opacity="0.5"/>
+  
+  <!-- Center Shine -->
+  <circle cx="320" cy="320" r="24" fill="#FFFBEB"/>
+</svg>

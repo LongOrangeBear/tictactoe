@@ -1,0 +1,13 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant C: Neon Glow -->
+  <defs>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <circle cx="28" cy="28" r="28" fill="#1E1B4B" fill-opacity="0.8"/>
+  <path d="M28 10L33.5 21.5L46 23.5L37 32.5L39 45L28 39L17 45L19 32.5L10 23.5L22.5 21.5L28 10Z" 
+        stroke="#FCD34D" stroke-width="2" fill="none" filter="url(#neon)"/>
+  <circle cx="28" cy="28" r="2" fill="#FFF"/>
+</svg>

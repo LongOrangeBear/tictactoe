@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="favX" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+    <linearGradient id="favO" x1="48" y1="16" x2="16" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="64" height="64" rx="16" fill="url(#favBg)"/>
+  
+  <!-- X -->
+  <path d="M16 16L30 30" stroke="url(#favX)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M30 16L16 30" stroke="url(#favX)" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- O -->
+  <circle cx="48" cy="48" r="8" stroke="url(#favO)" stroke-width="6"/>
+  
+  <!-- Grid Hints -->
+  <path d="M32 10V54" stroke="white" stroke-width="2" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+  <path d="M10 32H54" stroke="white" stroke-width="2" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+</svg>

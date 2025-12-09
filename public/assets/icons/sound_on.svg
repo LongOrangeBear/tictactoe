@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="soundGrad" x1="128" y1="40" x2="128" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#4B5563"/>
+    </linearGradient>
+  </defs>
+  
+  <path d="M40 96H80L128 48V208L80 160H40C31.1634 160 24 152.837 24 144V112C24 103.163 31.1634 96 40 96Z" 
+        fill="url(#soundGrad)"/>
+  
+  <path d="M168 80C184 96 192 112 192 128C192 144 184 160 168 176" 
+        stroke="url(#soundGrad)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M200 48C224 72 240 96 240 128C240 160 224 184 200 208" 
+        stroke="url(#soundGrad)" stroke-width="16" stroke-linecap="round" opacity="0.6"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="natureOGradientUHD" x1="80" y1="80" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#BBF7D0"/>
+      <stop offset="50%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <filter id="vineShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="4" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Vine Ring (Intertwined effect) -->
+  <circle cx="320" cy="320" r="240" stroke="#14532D" stroke-width="32" stroke-linecap="round" fill="none" opacity="0.3"/>
+  <circle cx="320" cy="320" r="240" stroke="url(#natureOGradientUHD)" stroke-width="24" stroke-linecap="round" fill="none" filter="url(#vineShadow)"/>
+  
+  <!-- Secondary Vine wrapping around -->
+  <path d="M320 80 C 400 80, 560 160, 560 320 C 560 480, 400 560, 320 560 C 240 560, 80 480, 80 320 C 80 160, 240 80, 320 80" 
+        stroke="#86EFAC" stroke-width="8" fill="none" stroke-dasharray="40 60" stroke-linecap="round"/>
+
+  <!-- Decorative Leaves on the Vine -->
+  <g fill="#22C55E" stroke="#14532D" stroke-width="3">
+    <!-- Top Leaf -->
+    <path d="M320 80C320 80 280 40 320 20C360 40 320 80 320 80Z"/>
+    <path d="M320 80L320 40" stroke="#86EFAC" stroke-width="2"/>
+    
+    <!-- Right Leaf -->
+    <path d="M560 320C560 320 600 280 620 320C600 360 560 320 560 320Z"/>
+    <path d="M560 320L600 320" stroke="#86EFAC" stroke-width="2"/>
+    
+    <!-- Bottom Leaf -->
+    <path d="M320 560C320 560 360 600 320 620C280 600 320 560 320 560Z"/>
+    <path d="M320 560L320 600" stroke="#86EFAC" stroke-width="2"/>
+    
+    <!-- Left Leaf -->
+    <path d="M80 320C80 320 40 360 20 320C40 280 80 320 80 320Z"/>
+    <path d="M80 320L40 320" stroke="#86EFAC" stroke-width="2"/>
+    
+    <!-- Extra small leaves -->
+    <path d="M490 150C490 150 510 130 520 150C510 170 490 150 490 150Z" transform="rotate(45 490 150)"/>
+    <path d="M150 490C150 490 170 470 180 490C170 510 150 490 150 490Z" transform="rotate(225 150 490)"/>
+  </g>
+  
+  <!-- Inner Highlight -->
+  <circle cx="320" cy="320" r="240" stroke="#DCFCE7" stroke-width="6" stroke-dasharray="30 50" stroke-linecap="round" fill="none" opacity="0.7"/>
+</svg>
