@@ -1,0 +1,62 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cloverGradV3" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ECFDF5"/>
+      <stop offset="25%" stop-color="#86EFAC"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="75%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <radialGradient id="centerGlowV3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF9C3"/>
+      <stop offset="100%" stop-color="#FACC15"/>
+    </radialGradient>
+    <filter id="glowCloverV3" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Four Leaf Clover - Heart shaped leaves -->
+  <g filter="url(#glowCloverV3)">
+    <!-- Top Leaf (heart) -->
+    <path d="M256 256L256 160C256 160 200 160 200 100C200 60 224 40 256 40C288 40 312 60 312 100C312 160 256 160 256 160Z
+             M256 160C256 160 200 120 200 100C200 60 224 40 256 40
+             M256 160C256 160 312 120 312 100C312 60 288 40 256 40" 
+          fill="url(#cloverGradV3)"/>
+    
+    <!-- Right Leaf (heart) -->
+    <path d="M256 256L352 256C352 256 352 200 412 200C452 200 472 224 472 256C472 288 452 312 412 312C352 312 352 256 352 256Z" 
+          fill="url(#cloverGradV3)"/>
+    
+    <!-- Bottom Leaf (heart) -->
+    <path d="M256 256L256 352C256 352 200 352 200 412C200 452 224 472 256 472C288 472 312 452 312 412C312 352 256 352 256 352Z" 
+          fill="url(#cloverGradV3)"/>
+    
+    <!-- Left Leaf (heart) -->
+    <path d="M256 256L160 256C160 256 160 200 100 200C60 200 40 224 40 256C40 288 60 312 100 312C160 312 160 256 160 256Z" 
+          fill="url(#cloverGradV3)"/>
+  </g>
+  
+  <!-- Leaf heart details -->
+  <path d="M256 80V160" stroke="#D1FAE5" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M432 256H352" stroke="#D1FAE5" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M256 432V352" stroke="#D1FAE5" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M80 256H160" stroke="#D1FAE5" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Golden center (lucky coin look) -->
+  <circle cx="256" cy="256" r="40" fill="url(#centerGlowV3)" filter="url(#glowCloverV3)"/>
+  <circle cx="256" cy="256" r="28" stroke="#CA8A04" stroke-width="4" fill="none"/>
+  <text x="256" y="268" text-anchor="middle" font-size="32" font-weight="bold" fill="#713F12">4</text>
+  
+  <!-- Highlights on leaves -->
+  <ellipse cx="220" cy="80" rx="20" ry="16" fill="white" fill-opacity="0.5"/>
+  <ellipse cx="420" cy="240" rx="16" ry="20" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="292" cy="420" rx="20" ry="16" fill="white" fill-opacity="0.35"/>
+  <ellipse cx="92" cy="280" rx="16" ry="20" fill="white" fill-opacity="0.4"/>
+  
+  <!-- Lucky sparkles -->
+  <path d="M360 60L366 44L382 38L366 32L360 16L354 32L338 38L354 44L360 60Z" fill="white"/>
+  <path d="M152 452L158 436L174 430L158 424L152 408L146 424L130 430L146 436L152 452Z" fill="#D1FAE5"/>
+  <path d="M460 400L466 384L482 378L466 372L460 356L454 372L438 378L454 384L460 400Z" fill="#86EFAC" opacity="0.8"/>
+</svg>

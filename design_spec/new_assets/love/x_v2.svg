@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g stroke="#FF1493" stroke-width="25" stroke-linecap="round">
+<line x1="100" y1="100" x2="412" y2="412"/>
+<line x1="412" y1="100" x2="100" y2="412"/>
+</g>
+<path d="M90 90L130 90L90 130Z" fill="#FF1493"/>
+<path d="M422 422L382 422L422 382Z" fill="#FF1493"/>
+<path d="M422 90L382 90L422 130Z" fill="#FF1493"/>
+<path d="M90 422L130 422L90 382Z" fill="#FF1493"/>
+</svg>

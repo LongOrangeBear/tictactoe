@@ -1,0 +1,53 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cloverGradV2" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D1FAE5"/>
+      <stop offset="30%" stop-color="#6EE7B7"/>
+      <stop offset="70%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#065F46"/>
+    </linearGradient>
+    <filter id="glowCloverV2" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Shamrock - 3 leaves Irish style -->
+  <g filter="url(#glowCloverV2)">
+    <!-- Top Leaf -->
+    <path d="M256 200C256 200 200 200 180 140C160 80 200 40 256 40C312 40 352 80 332 140C312 200 256 200 256 200Z" 
+          fill="url(#cloverGradV2)"/>
+    
+    <!-- Bottom Left Leaf -->
+    <path d="M256 260C256 260 196 300 140 280C80 260 60 200 100 160C140 120 200 140 256 200C256 200 200 220 256 260Z" 
+          fill="url(#cloverGradV2)"/>
+    
+    <!-- Bottom Right Leaf -->
+    <path d="M256 260C256 260 316 300 372 280C432 260 452 200 412 160C372 120 312 140 256 200C256 200 312 220 256 260Z" 
+          fill="url(#cloverGradV2)"/>
+  </g>
+  
+  <!-- Stem -->
+  <path d="M256 260C256 340 240 400 200 480" 
+        stroke="#065F46" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <path d="M256 260C256 320 244 380 216 440" 
+        stroke="#10B981" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.5"/>
+  
+  <!-- Leaf veins -->
+  <path d="M256 200L256 80" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  <path d="M256 220L160 180" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M256 220L352 180" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  
+  <!-- Highlights -->
+  <ellipse cx="240" cy="100" rx="32" ry="24" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="160" cy="200" rx="20" ry="16" fill="white" fill-opacity="0.3"/>
+  <ellipse cx="352" cy="200" rx="20" ry="16" fill="white" fill-opacity="0.3"/>
+  
+  <!-- Center -->
+  <circle cx="256" cy="220" r="20" fill="#047857"/>
+  <circle cx="256" cy="220" r="12" fill="#A7F3D0"/>
+  
+  <!-- Lucky sparkles -->
+  <path d="M380 60L386 44L402 38L386 32L380 16L374 32L358 38L374 44L380 60Z" fill="#D1FAE5"/>
+  <path d="M100 100L106 84L122 78L106 72L100 56L94 72L78 78L94 84L100 100Z" fill="#D1FAE5" opacity="0.8"/>
+</svg>

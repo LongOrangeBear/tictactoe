@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g transform="rotate(45 256 256)">
+<rect x="236" y="50" width="40" height="412" fill="#FFD700"/>
+<rect x="50" y="236" width="412" height="40" fill="#FFD700"/>
+</g>
+<circle cx="256" cy="256" r="50" fill="#FFA500"/>
+</svg>

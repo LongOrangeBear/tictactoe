@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#006400"/><stop offset="1" stop-color="#00FF00"/></linearGradient></defs>
+<circle cx="256" cy="256" r="150" stroke="url(#leaf)" stroke-width="30" fill="none"/>
+<path d="M256 106 L236 80 L276 80 Z" fill="#00FF00"/>
+<path d="M406 256 L430 236 L430 276 Z" fill="#00FF00"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldRingV1" x1="100" y1="100" x2="412" y2="412" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="30%" stop-color="#FCD34D"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="gemGradV1" x1="200" y1="80" x2="312" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <filter id="glowRingV1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="gemSparkle">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Ring band - 3D effect -->
+  <g filter="url(#glowRingV1)">
+    <!-- Outer ring -->
+    <ellipse cx="256" cy="320" rx="180" ry="100" stroke="url(#goldRingV1)" stroke-width="32" fill="none"/>
+    <!-- Inner highlight -->
+    <ellipse cx="256" cy="320" rx="180" ry="100" stroke="#FEF3C7" stroke-width="4" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Ring band top part (behind gem) -->
+  <path d="M200 220L256 180L312 220" stroke="url(#goldRingV1)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Main gemstone - Diamond shape -->
+  <g filter="url(#gemSparkle)">
+    <path d="M256 80L196 140L216 200L256 220L296 200L316 140L256 80Z" fill="url(#gemGradV1)"/>
+    <!-- Gem facets -->
+    <path d="M256 80L216 140L256 160L296 140L256 80Z" fill="#BAE6FD" opacity="0.5"/>
+    <path d="M256 160L216 140L216 200L256 220L256 160Z" fill="#0EA5E9" opacity="0.4"/>
+    <path d="M256 160L296 140L296 200L256 220L256 160Z" fill="#0284C7" opacity="0.5"/>
+  </g>
+  
+  <!-- Gem sparkle -->
+  <path d="M256 100L260 88L276 84L260 80L256 68L252 80L236 84L252 88L256 100Z" fill="white"/>
+  <circle cx="232" cy="120" r="4" fill="white" opacity="0.8"/>
+  <circle cx="280" cy="130" r="3" fill="white" opacity="0.6"/>
+  
+  <!-- Side gems -->
+  <circle cx="180" cy="180" r="16" fill="#FBBF24"/>
+  <circle cx="180" cy="180" r="10" fill="#FEF3C7" opacity="0.6"/>
+  <circle cx="332" cy="180" r="16" fill="#FBBF24"/>
+  <circle cx="332" cy="180" r="10" fill="#FEF3C7" opacity="0.6"/>
+  
+  <!-- Gold ring highlight -->
+  <ellipse cx="140" cy="300" rx="20" ry="12" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="380" cy="340" rx="24" ry="14" fill="white" fill-opacity="0.3"/>
+</svg>

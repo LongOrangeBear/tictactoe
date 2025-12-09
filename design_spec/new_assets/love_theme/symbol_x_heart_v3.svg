@@ -1,0 +1,59 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartGradV3" x1="256" y1="40" x2="256" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FECDD3"/>
+      <stop offset="35%" stop-color="#FB7185"/>
+      <stop offset="65%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+    <linearGradient id="shineGradV3" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glowHeartV3" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Floating particles -->
+  <circle cx="100" cy="150" r="6" fill="#FDA4AF" opacity="0.6"/>
+  <circle cx="420" cy="180" r="8" fill="#FECDD3" opacity="0.5"/>
+  <circle cx="80" cy="320" r="5" fill="#FB7185" opacity="0.4"/>
+  <circle cx="440" cy="340" r="7" fill="#FDA4AF" opacity="0.5"/>
+  
+  <!-- Shadow -->
+  <ellipse cx="256" cy="460" rx="100" ry="20" fill="#831843" fill-opacity="0.2"/>
+  
+  <!-- Main Heart - Sharp elegant style -->
+  <g filter="url(#glowHeartV3)">
+    <path d="M256 420
+             C256 420 48 256 48 148
+             C48 72 104 32 172 32
+             C224 32 256 80 256 80
+             C256 80 288 32 340 32
+             C408 32 464 72 464 148
+             C464 256 256 420 256 420Z" 
+          fill="url(#heartGradV3)"/>
+  </g>
+  
+  <!-- Shine overlay -->
+  <path d="M256 80
+           C256 80 224 32 172 32
+           C104 32 48 72 48 148
+           C48 180 60 212 80 244
+           Q160 160 240 120
+           Q256 100 256 80Z" 
+        fill="url(#shineGradV3)"/>
+  
+  <!-- Heart beat lines -->
+  <path d="M180 200L200 180L220 220L240 160L260 200L280 180L300 200" 
+        stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.5"/>
+  
+  <!-- Center sparkle -->
+  <path d="M256 300L262 280L282 274L262 268L256 248L250 268L230 274L250 280L256 300Z" fill="white"/>
+  
+  <!-- Small hearts floating -->
+  <path d="M120 100C120 100 108 88 108 80C108 76 112 72 116 72C118 72 120 74 120 76C120 74 122 72 124 72C128 72 132 76 132 80C132 88 120 100 120 100Z" fill="#FECDD3" opacity="0.8"/>
+  <path d="M400 120C400 120 388 108 388 100C388 96 392 92 396 92C398 92 400 94 400 96C400 94 402 92 404 92C408 92 412 96 412 100C412 108 400 120 400 120Z" fill="#FECDD3" opacity="0.7"/>
+</svg>

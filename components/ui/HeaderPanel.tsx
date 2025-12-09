@@ -81,12 +81,15 @@ export function HeaderPanel({
                 </div>
 
                 {/* Telegram Button */}
-                <button
-                    className="relative w-8 h-8 md:w-9 md:h-9 transition-transform hover:scale-105 active:scale-95"
+                <a
+                    href="https://t.me/tictactoepromobot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-8 h-8 md:w-9 md:h-9 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center"
                     aria-label="Open Telegram"
                 >
                     <Image src="/assets/icons/telegram.svg" alt="Telegram" fill />
-                </button>
+                </a>
             </div>
         </div>
     );

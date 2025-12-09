@@ -1,0 +1,67 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="branchGradV1" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A3E635"/>
+      <stop offset="50%" stop-color="#65A30D"/>
+      <stop offset="100%" stop-color="#3F6212"/>
+    </linearGradient>
+    <linearGradient id="woodGradV1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D6D3D1"/>
+      <stop offset="50%" stop-color="#78716C"/>
+      <stop offset="100%" stop-color="#44403C"/>
+    </linearGradient>
+    <filter id="glowBranchV1" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Circular wreath of branches -->
+  <g filter="url(#glowBranchV1)">
+    <!-- Main branch ring -->
+    <circle cx="256" cy="256" r="180" stroke="url(#woodGradV1)" stroke-width="24" fill="none"/>
+    <circle cx="256" cy="256" r="180" stroke="#A8A29E" stroke-width="4" stroke-dasharray="8 16" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Leaves around the ring -->
+  <g fill="url(#branchGradV1)">
+    <!-- Top leaves -->
+    <path d="M256 60C256 60 240 40 256 20C272 40 256 60 256 60Z"/>
+    <path d="M240 72C240 72 220 60 224 40C244 52 240 72 240 72Z"/>
+    <path d="M272 72C272 72 292 60 288 40C268 52 272 72 272 72Z"/>
+    
+    <!-- Right leaves -->
+    <path d="M452 256C452 256 472 240 492 256C472 272 452 256 452 256Z"/>
+    <path d="M440 240C440 240 452 220 472 224C460 244 440 240 440 240Z"/>
+    <path d="M440 272C440 272 452 292 472 288C460 268 440 272 440 272Z"/>
+    
+    <!-- Bottom leaves -->
+    <path d="M256 452C256 452 272 472 256 492C240 472 256 452 256 452Z"/>
+    <path d="M272 440C272 440 292 452 288 472C268 460 272 440 272 440Z"/>
+    <path d="M240 440C240 440 220 452 224 472C244 460 240 440 240 440Z"/>
+    
+    <!-- Left leaves -->
+    <path d="M60 256C60 256 40 272 20 256C40 240 60 256 60 256Z"/>
+    <path d="M72 272C72 272 60 292 40 288C52 268 72 272 72 272Z"/>
+    <path d="M72 240C72 240 60 220 40 224C52 244 72 240 72 240Z"/>
+    
+    <!-- Diagonal leaves -->
+    <path d="M380 120C380 120 400 100 420 120C400 140 380 120 380 120Z"/>
+    <path d="M120 380C120 380 100 400 80 380C100 360 120 380 120 380Z"/>
+    <path d="M380 380C380 380 400 400 420 380C400 360 380 380 380 380Z"/>
+    <path d="M120 120C120 120 100 100 80 120C100 140 120 120 120 120Z"/>
+  </g>
+  
+  <!-- Small berries -->
+  <circle cx="320" cy="80" r="10" fill="#EF4444"/>
+  <circle cx="316" cy="76" r="3" fill="white" fill-opacity="0.6"/>
+  <circle cx="432" cy="320" r="10" fill="#EF4444"/>
+  <circle cx="428" cy="316" r="3" fill="white" fill-opacity="0.6"/>
+  <circle cx="192" cy="432" r="10" fill="#EF4444"/>
+  <circle cx="188" cy="428" r="3" fill="white" fill-opacity="0.6"/>
+  <circle cx="80" cy="192" r="10" fill="#EF4444"/>
+  <circle cx="76" cy="188" r="3" fill="white" fill-opacity="0.6"/>
+  
+  <!-- Inner highlight -->
+  <circle cx="256" cy="256" r="160" stroke="#D6D3D1" stroke-width="2" fill="none" opacity="0.3"/>
+</svg>

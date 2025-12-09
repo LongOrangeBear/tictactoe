@@ -47,8 +47,8 @@ export function Cell({ value, index, onClick, isWinningCell, disabled }: CellPro
                 boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.6)',
             } : {}}
             whileTap={!disabled && !value ? { scale: 0.97 } : {}}
-            initial={{ opacity: 0, scale: 0.8, backgroundColor: 'rgba(255, 255, 255, 0)' }}
-            animate={{ opacity: 1, scale: 1, backgroundColor: 'rgba(255, 255, 255, 0)' }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.2, delay: index * 0.03 }}
             role="gridcell"
             aria-disabled={disabled || value !== null}

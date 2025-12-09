@@ -1,0 +1,50 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kissGradV2" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#9F1239"/>
+    </linearGradient>
+    <filter id="glowKissV2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Ring of hearts forming O -->
+  <g filter="url(#glowKissV2)">
+    <!-- Main ring -->
+    <circle cx="256" cy="256" r="180" stroke="url(#kissGradV2)" stroke-width="36" fill="none"/>
+  </g>
+  
+  <!-- Heart decorations on ring -->
+  <!-- Top heart -->
+  <path d="M256 60C256 60 240 48 240 38C240 32 246 26 252 26C255 26 258 30 256 34C254 30 257 26 260 26C266 26 272 32 272 38C272 48 256 60 256 60Z" 
+        fill="#FECDD3" transform="scale(1.5) translate(-85, 5)"/>
+  
+  <!-- Right heart -->
+  <path d="M256 60C256 60 240 48 240 38C240 32 246 26 252 26C255 26 258 30 256 34C254 30 257 26 260 26C266 26 272 32 272 38C272 48 256 60 256 60Z" 
+        fill="#FECDD3" transform="rotate(90, 256, 256) scale(1.5) translate(-85, 5)"/>
+  
+  <!-- Bottom heart -->
+  <path d="M256 60C256 60 240 48 240 38C240 32 246 26 252 26C255 26 258 30 256 34C254 30 257 26 260 26C266 26 272 32 272 38C272 48 256 60 256 60Z" 
+        fill="#FECDD3" transform="rotate(180, 256, 256) scale(1.5) translate(-85, 5)"/>
+  
+  <!-- Left heart -->
+  <path d="M256 60C256 60 240 48 240 38C240 32 246 26 252 26C255 26 258 30 256 34C254 30 257 26 260 26C266 26 272 32 272 38C272 48 256 60 256 60Z" 
+        fill="#FECDD3" transform="rotate(-90, 256, 256) scale(1.5) translate(-85, 5)"/>
+  
+  <!-- Diagonal hearts -->
+  <path d="M400 112C400 112 384 100 384 90C384 84 390 78 396 78C399 78 402 82 400 86C398 82 401 78 404 78C410 78 416 84 416 90C416 100 400 112 400 112Z" fill="#FB7185"/>
+  <path d="M112 400C112 400 96 388 96 378C96 372 102 366 108 366C111 366 114 370 112 374C110 370 113 366 116 366C122 366 128 372 128 378C128 388 112 400 112 400Z" fill="#FB7185"/>
+  <path d="M400 400C400 400 384 388 384 378C384 372 390 366 396 366C399 366 402 370 400 374C398 370 401 366 404 366C410 366 416 372 416 378C416 388 400 400 400 400Z" fill="#FB7185"/>
+  <path d="M112 112C112 112 96 100 96 90C96 84 102 78 108 78C111 78 114 82 112 86C110 82 113 78 116 78C122 78 128 84 128 90C128 100 112 112 112 112Z" fill="#FB7185"/>
+  
+  <!-- Inner highlight ring -->
+  <circle cx="256" cy="256" r="180" stroke="white" stroke-width="4" stroke-dasharray="20 30" fill="none" opacity="0.5"/>
+  
+  <!-- Kiss lips in center -->
+  <path d="M216 256Q236 240 256 256Q276 240 296 256Q276 280 256 300Q236 280 216 256Z" fill="#E11D48"/>
+  <ellipse cx="236" cy="252" rx="10" ry="6" fill="#FDA4AF" opacity="0.6"/>
+  <ellipse cx="276" cy="252" rx="10" ry="6" fill="#FDA4AF" opacity="0.6"/>
+</svg>

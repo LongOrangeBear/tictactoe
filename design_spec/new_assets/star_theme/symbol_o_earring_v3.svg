@@ -1,0 +1,86 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roseGoldEarV3" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDF2F8"/>
+      <stop offset="30%" stop-color="#FBCFE8"/>
+      <stop offset="70%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#9D174D"/>
+    </linearGradient>
+    <linearGradient id="crystalV3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FDF4FF"/>
+      <stop offset="100%" stop-color="#D946EF"/>
+    </linearGradient>
+    <filter id="glowEarV3" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Left Chandelier Earring -->
+  <g transform="translate(-60, 0)">
+    <!-- Top stud -->
+    <circle cx="180" cy="60" r="20" fill="url(#roseGoldEarV3)" filter="url(#glowEarV3)"/>
+    <circle cx="175" cy="55" r="6" fill="white" fill-opacity="0.6"/>
+    
+    <!-- Main body -->
+    <g filter="url(#glowEarV3)">
+      <path d="M140 100L180 80L220 100L200 180L180 200L160 180Z" fill="url(#roseGoldEarV3)"/>
+    </g>
+    
+    <!-- Crystal tier 1 -->
+    <path d="M140 140L148 120L156 140L148 160Z" fill="url(#crystalV3)"/>
+    <path d="M180 150L188 130L196 150L188 170Z" fill="url(#crystalV3)"/>
+    <path d="M212 140L220 120L228 140L220 160Z" fill="url(#crystalV3)"/>
+    
+    <!-- Crystal tier 2 -->
+    <path d="M120 220L132 190L144 220L132 250Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M160 240L172 210L184 240L172 270Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M196 240L208 210L220 240L208 270Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M232 220L244 190L256 220L244 250Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    
+    <!-- Crystal tier 3 - drops -->
+    <path d="M100 300L116 260L132 300L116 360Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M148 320L164 280L180 320L164 400Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M196 320L212 280L228 320L212 400Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M244 300L260 260L276 300L260 360Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    
+    <!-- Chain connections -->
+    <line x1="148" y1="170" x2="132" y2="190" stroke="url(#roseGoldEarV3)" stroke-width="3"/>
+    <line x1="188" y1="180" x2="172" y2="210" stroke="url(#roseGoldEarV3)" stroke-width="3"/>
+    <line x1="188" y1="180" x2="208" y2="210" stroke="url(#roseGoldEarV3)" stroke-width="3"/>
+    <line x1="220" y1="170" x2="244" y2="190" stroke="url(#roseGoldEarV3)" stroke-width="3"/>
+  </g>
+  
+  <!-- Right Chandelier Earring -->
+  <g transform="translate(60, 0)">
+    <!-- Top stud -->
+    <circle cx="332" cy="60" r="20" fill="url(#roseGoldEarV3)" filter="url(#glowEarV3)"/>
+    <circle cx="327" cy="55" r="6" fill="white" fill-opacity="0.6"/>
+    
+    <!-- Main body -->
+    <g filter="url(#glowEarV3)">
+      <path d="M292 100L332 80L372 100L352 180L332 200L312 180Z" fill="url(#roseGoldEarV3)"/>
+    </g>
+    
+    <!-- Crystal tier 1 -->
+    <path d="M292 140L300 120L308 140L300 160Z" fill="url(#crystalV3)"/>
+    <path d="M332 150L340 130L348 150L340 170Z" fill="url(#crystalV3)"/>
+    <path d="M364 140L372 120L380 140L372 160Z" fill="url(#crystalV3)"/>
+    
+    <!-- Crystal tier 2 -->
+    <path d="M272 220L284 190L296 220L284 250Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M312 240L324 210L336 240L324 270Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M348 240L360 210L372 240L360 270Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M384 220L396 190L408 220L396 250Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    
+    <!-- Crystal tier 3 - drops -->
+    <path d="M252 300L268 260L284 300L268 360Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M300 320L316 280L332 320L316 400Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M348 320L364 280L380 320L364 400Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+    <path d="M396 300L412 260L428 300L412 360Z" fill="url(#crystalV3)" filter="url(#glowEarV3)"/>
+  </g>
+  
+  <!-- Central sparkle -->
+  <path d="M256 30L260 18L274 14L260 10L256 -2L252 10L238 14L252 18L256 30Z" fill="white"/>
+</svg>

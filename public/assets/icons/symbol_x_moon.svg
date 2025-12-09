@@ -1,25 +1,63 @@
-<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="nightXGradientUHD" x1="160" y1="160" x2="480" y2="480" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#DDD6FE"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+    <linearGradient id="moonGradV3" x1="60" y1="60" x2="452" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="25%" stop-color="#C7D2FE"/>
+      <stop offset="50%" stop-color="#A5B4FC"/>
+      <stop offset="75%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
-    <filter id="glowXNightUHD" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="24" result="blur"/>
+    <radialGradient id="fullMoonV3" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="40%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </radialGradient>
+    <filter id="glowMoonV3" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
   
-  <g filter="url(#glowXNightUHD)">
-    <!-- Crescent 1 (Top-Left to Bottom-Right) -->
-    <path d="M400 120C360 120 320 144 288 192C256 240 256 304 304 368C352 432 416 448 448 432C416 496 320 520 224 464C128 416 112 288 176 192C240 96 352 64 400 120Z" 
-          fill="url(#nightXGradientUHD)"/>
-          
-    <!-- Crescent 2 (Top-Right to Bottom-Left) - Flipped -->
-    <path d="M240 120C280 120 320 144 352 192C384 240 384 304 336 368C288 432 224 448 192 432C224 496 320 520 416 464C512 416 528 288 464 192C400 96 288 64 240 120Z" 
-          fill="url(#nightXGradientUHD)"/>
+  <!-- Outer halo -->
+  <circle cx="256" cy="256" r="240" fill="#6366F1" fill-opacity="0.08"/>
+  <circle cx="256" cy="256" r="200" fill="#818CF8" fill-opacity="0.1"/>
+  
+  <!-- Full moon with crescent shadow -->
+  <g filter="url(#glowMoonV3)">
+    <!-- Base moon -->
+    <circle cx="256" cy="256" r="180" fill="url(#fullMoonV3)"/>
+    
+    <!-- Crescent shadow overlay -->
+    <path d="M400 80C480 160 480 352 400 432C320 512 160 512 80 432C160 480 280 460 340 380C400 300 400 180 340 100C370 80 390 70 400 80Z" 
+          fill="#4338CA" fill-opacity="0.4"/>
   </g>
   
-  <!-- Center Star -->
-  <path d="M320 280L330 310L360 320L330 330L320 360L310 330L280 320L310 310L320 280Z" fill="white"/>
+  <!-- Mare (lunar seas) -->
+  <ellipse cx="200" cy="200" rx="48" ry="40" fill="#A5B4FC" fill-opacity="0.4"/>
+  <ellipse cx="300" cy="280" rx="56" ry="48" fill="#A5B4FC" fill-opacity="0.35"/>
+  <ellipse cx="180" cy="340" rx="36" ry="32" fill="#A5B4FC" fill-opacity="0.3"/>
+  <circle cx="340" cy="160" r="24" fill="#A5B4FC" fill-opacity="0.25"/>
+  <circle cx="360" cy="380" r="32" fill="#A5B4FC" fill-opacity="0.3"/>
+  
+  <!-- High contrast craters -->
+  <circle cx="160" cy="240" r="10" fill="#6366F1" fill-opacity="0.2"/>
+  <circle cx="280" cy="160" r="8" fill="#6366F1" fill-opacity="0.15"/>
+  <circle cx="240" cy="380" r="12" fill="#6366F1" fill-opacity="0.2"/>
+  
+  <!-- Bright highlights -->
+  <ellipse cx="180" cy="140" rx="56" ry="40" fill="white" fill-opacity="0.5"/>
+  <ellipse cx="220" cy="180" rx="24" ry="16" fill="white" fill-opacity="0.3"/>
+  <circle cx="140" cy="200" r="8" fill="white" fill-opacity="0.4"/>
+  
+  <!-- Stars in background -->
+  <path d="M60 80L66 64L82 58L66 52L60 36L54 52L38 58L54 64L60 80Z" fill="white"/>
+  <path d="M452 120L458 104L474 98L458 92L452 76L446 92L430 98L446 104L452 120Z" fill="#E0E7FF"/>
+  <path d="M480 400L486 384L502 378L486 372L480 356L474 372L458 378L474 384L480 400Z" fill="#C7D2FE" opacity="0.8"/>
+  <path d="M40 420L46 404L62 398L46 392L40 376L34 392L18 398L34 404L40 420Z" fill="white" opacity="0.9"/>
+  
+  <!-- Tiny stars -->
+  <circle cx="100" cy="140" r="3" fill="white"/>
+  <circle cx="420" cy="60" r="2" fill="#E0E7FF"/>
+  <circle cx="480" cy="260" r="3" fill="white" opacity="0.7"/>
+  <circle cx="32" cy="300" r="2" fill="#C7D2FE"/>
 </svg>

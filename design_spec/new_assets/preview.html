@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Icons Preview - TicTacToe Themes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #f472b6, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .theme-section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .love-theme .theme-title {
+            border-color: #f472b6;
+            color: #f472b6;
+        }
+
+        .star-theme .theme-title {
+            border-color: #fbbf24;
+            color: #fbbf24;
+        }
+
+        .nature-theme .theme-title {
+            border-color: #4ade80;
+            color: #4ade80;
+        }
+
+        .night-theme .theme-title {
+            border-color: #a78bfa;
+            color: #a78bfa;
+        }
+
+        .symbol-group {
+            margin-bottom: 40px;
+        }
+
+        .symbol-group h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .icons-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: flex-start;
+        }
+
+        .icon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .icon-card img {
+            width: 128px;
+            height: 128px;
+            margin-bottom: 12px;
+        }
+
+        .icon-card.large img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .icon-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .variant-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+        }
+
+        .size-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .size-btn {
+            padding: 10px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .size-btn:hover,
+        .size-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .icons-row {
+                justify-content: center;
+            }
+
+            .icon-card img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎮 SVG Icons Preview</h1>
+
+    <div class="size-toggle">
+        <button class="size-btn active" onclick="setSize('normal')">Normal (128px)</button>
+        <button class="size-btn" onclick="setSize('large')">Large (180px)</button>
+    </div>
+
+    <!-- LOVE THEME -->
+    <section class="theme-section love-theme">
+        <h2 class="theme-title">💕 Love Theme</h2>
+
+        <div class="symbol-group">
+            <h3>Symbol X — Сердечко (Heart)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="love_theme/symbol_x_heart_v1.svg" alt="Heart V1">
+                    <span class="icon-label">Classic Heart</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="love_theme/symbol_x_heart_v2.svg" alt="Heart V2">
+                    <span class="icon-label">Plump Glass Heart</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="love_theme/symbol_x_heart_v3.svg" alt="Heart V3">
+                    <span class="icon-label">Elegant Heart + Sparkles</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="symbol-group">
+            <h3>Symbol O — Бантик / Поцелуй / Стрела Купидона</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="love_theme/symbol_o_bow_v1.svg" alt="Bow V1">
+                    <span class="icon-label">Bow Ribbon</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="love_theme/symbol_o_kiss_v2.svg" alt="Kiss V2">
+                    <span class="icon-label">Heart Ring + Kiss</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="love_theme/symbol_o_cupid_v3.svg" alt="Cupid V3">
+                    <span class="icon-label">Cupid Arrow Heart</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAR THEME -->
+    <section class="theme-section star-theme">
+        <h2 class="theme-title">⭐ Star Theme</h2>
+
+        <div class="symbol-group">
+            <h3>Symbol X — Кольцо с украшениями (Ring)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="star_theme/symbol_x_ring_v1.svg" alt="Ring V1">
+                    <span class="icon-label">Gold + Diamond</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="star_theme/symbol_x_ring_v2.svg" alt="Ring V2">
+                    <span class="icon-label">Rose Gold + Ruby Heart</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="star_theme/symbol_x_ring_v3.svg" alt="Ring V3">
+                    <span class="icon-label">Platinum + Emerald</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="symbol-group">
+            <h3>Symbol O — Серьги (Earrings)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="star_theme/symbol_o_earring_v1.svg" alt="Earring V1">
+                    <span class="icon-label">Pearl Drops</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="star_theme/symbol_o_earring_v2.svg" alt="Earring V2">
+                    <span class="icon-label">Diamond Hoops</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="star_theme/symbol_o_earring_v3.svg" alt="Earring V3">
+                    <span class="icon-label">Crystal Chandelier</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NATURE THEME -->
+    <section class="theme-section nature-theme">
+        <h2 class="theme-title">🌿 Nature Theme</h2>
+
+        <div class="symbol-group">
+            <h3>Symbol X — Клевер (Clover)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="nature_theme/symbol_x_clover_v1.svg" alt="Clover V1">
+                    <span class="icon-label">4-Leaf Classic</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="nature_theme/symbol_x_clover_v2.svg" alt="Clover V2">
+                    <span class="icon-label">Irish Shamrock</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="nature_theme/symbol_x_clover_v3.svg" alt="Clover V3">
+                    <span class="icon-label">Lucky Heart Clover</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="symbol-group">
+            <h3>Symbol O — Веточки (Branches)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="nature_theme/symbol_o_branch_v1.svg" alt="Branch V1">
+                    <span class="icon-label">Berry Wreath</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="nature_theme/symbol_o_branch_v2.svg" alt="Branch V2">
+                    <span class="icon-label">Flower Vine</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="nature_theme/symbol_o_branch_v3.svg" alt="Branch V3">
+                    <span class="icon-label">Oak + Acorns</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NIGHT THEME -->
+    <section class="theme-section night-theme">
+        <h2 class="theme-title">🌙 Night Theme</h2>
+
+        <div class="symbol-group">
+            <h3>Symbol X — Луна (Moon)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="night_theme/symbol_x_moon_v1.svg" alt="Moon V1">
+                    <span class="icon-label">Golden Crescent</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="night_theme/symbol_x_moon_v2.svg" alt="Moon V2">
+                    <span class="icon-label">Mystical Purple</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="night_theme/symbol_x_moon_v3.svg" alt="Moon V3">
+                    <span class="icon-label">Full Moon + Shadow</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="symbol-group">
+            <h3>Symbol O — Звезда (Star)</h3>
+            <div class="icons-row">
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 1</span>
+                    <img src="night_theme/symbol_o_star_v1.svg" alt="Star V1">
+                    <span class="icon-label">Golden 5-Point</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 2</span>
+                    <img src="night_theme/symbol_o_star_v2.svg" alt="Star V2">
+                    <span class="icon-label">Mystical 4-Point</span>
+                </div>
+                <div class="icon-card">
+                    <span class="variant-badge">Вариант 3</span>
+                    <img src="night_theme/symbol_o_star_v3.svg" alt="Star V3">
+                    <span class="icon-label">Cyan Starburst</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function setSize(size) {
+            const cards = document.querySelectorAll('.icon-card');
+            const btns = document.querySelectorAll('.size-btn');
+
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (size === 'large') {
+                    card.classList.add('large');
+                } else {
+                    card.classList.remove('large');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

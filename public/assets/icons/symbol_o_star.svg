@@ -1,27 +1,51 @@
-<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="nightOGradientUHD" x1="320" y1="80" x2="320" y2="560" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E9D5FF"/>
-      <stop offset="50%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#6D28D9"/>
+    <linearGradient id="starGradV2" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="30%" stop-color="#E9D5FF"/>
+      <stop offset="60%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
     </linearGradient>
-    <filter id="glowONightUHD" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="16" result="blur"/>
+    <filter id="glowStarV2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
   
-  <!-- 4-point Star Shape -->
-  <g filter="url(#glowONightUHD)">
-    <path d="M320 80L360 280L560 320L360 360L320 560L280 360L80 320L280 280L320 80Z" 
-          stroke="url(#nightOGradientUHD)" stroke-width="24" stroke-linejoin="round" fill="none"/>
+  <!-- Mystical aura -->
+  <circle cx="256" cy="256" r="220" fill="#C084FC" fill-opacity="0.1" filter="url(#glowStarV2)"/>
+  
+  <!-- 4-pointed mystical star outline -->
+  <g filter="url(#glowStarV2)">
+    <path d="M256 32L296 200L464 256L296 312L256 480L216 312L48 256L216 200L256 32Z" 
+          stroke="url(#starGradV2)" stroke-width="32" stroke-linejoin="round" fill="none"/>
   </g>
   
-  <!-- Inner Highlight -->
-  <path d="M320 80L360 280L560 320L360 360L320 560L280 360L80 320L280 280L320 80Z" 
-        stroke="white" stroke-width="4" stroke-linejoin="round" fill="none" opacity="0.6"/>
-        
-  <!-- Center Glow -->
-  <circle cx="320" cy="320" r="40" fill="#A78BFA" fill-opacity="0.4" filter="url(#glowONightUHD)"/>
-  <circle cx="320" cy="320" r="10" fill="white"/>
+  <!-- Inner highlight ring -->
+  <path d="M256 32L296 200L464 256L296 312L256 480L216 312L48 256L216 200L256 32Z" 
+        stroke="white" stroke-width="4" stroke-linejoin="round" stroke-dasharray="20 30" fill="none" opacity="0.5"/>
+  
+  <!-- Diamond center -->
+  <path d="M256 200L280 256L256 312L232 256Z" fill="#E9D5FF" fill-opacity="0.5"/>
+  <path d="M200 256L256 232L312 256L256 280Z" fill="#E9D5FF" fill-opacity="0.5"/>
+  
+  <!-- Point highlights -->
+  <ellipse cx="256" cy="52" rx="16" ry="20" fill="white" fill-opacity="0.7"/>
+  <ellipse cx="444" cy="256" rx="20" ry="16" fill="white" fill-opacity="0.5"/>
+  <ellipse cx="256" cy="460" rx="16" ry="20" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="68" cy="256" rx="20" ry="16" fill="white" fill-opacity="0.5"/>
+  
+  <!-- Center glow -->
+  <circle cx="256" cy="256" r="24" fill="white" fill-opacity="0.6" filter="url(#glowStarV2)"/>
+  <circle cx="256" cy="256" r="12" fill="white"/>
+  
+  <!-- Magical particles -->
+  <circle cx="160" cy="160" r="6" fill="#E9D5FF"/>
+  <circle cx="352" cy="160" r="5" fill="#F5F3FF"/>
+  <circle cx="352" cy="352" r="6" fill="#E9D5FF"/>
+  <circle cx="160" cy="352" r="5" fill="#F5F3FF"/>
+  
+  <!-- Tiny sparkles -->
+  <path d="M120 100L124 88L136 84L124 80L120 68L116 80L104 84L116 88L120 100Z" fill="white"/>
+  <path d="M400 420L404 408L416 404L404 400L400 388L396 400L384 404L396 408L400 420Z" fill="#E9D5FF"/>
 </svg>

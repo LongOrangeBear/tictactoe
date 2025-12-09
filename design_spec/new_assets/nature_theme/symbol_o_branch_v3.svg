@@ -1,0 +1,88 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="oakGradV3" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="30%" stop-color="#A16207"/>
+      <stop offset="70%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+    <linearGradient id="leafGradV3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FEF9C3"/>
+      <stop offset="30%" stop-color="#FACC15"/>
+      <stop offset="70%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#713F12"/>
+    </linearGradient>
+    <linearGradient id="greenLeafV3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DCFCE7"/>
+      <stop offset="50%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <filter id="glowOakV3" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Oak branch wreath -->
+  <g filter="url(#glowOakV3)">
+    <circle cx="256" cy="256" r="175" stroke="url(#oakGradV3)" stroke-width="28" fill="none"/>
+    <!-- Wood texture -->
+    <circle cx="256" cy="256" r="175" stroke="#92400E" stroke-width="4" stroke-dasharray="40 20" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- Oak leaves - autumn colors -->
+  <g fill="url(#leafGradV3)">
+    <!-- Top oak leaf -->
+    <path d="M256 64C256 64 230 50 230 30C240 30 250 40 256 50C262 40 272 30 282 30C282 50 256 64 256 64Z
+             M256 64C256 64 240 48 232 52C232 60 244 68 256 68C268 68 280 60 280 52C272 48 256 64 256 64Z"/>
+    
+    <!-- Right oak leaf -->
+    <path d="M448 256C448 256 462 230 482 230C482 240 472 250 462 256C472 262 482 272 482 282C462 282 448 256 448 256Z"/>
+    
+    <!-- Bottom oak leaf -->
+    <path d="M256 448C256 448 282 462 282 482C272 482 262 472 256 462C250 472 240 482 230 482C230 462 256 448 256 448Z"/>
+    
+    <!-- Left oak leaf -->
+    <path d="M64 256C64 256 50 282 30 282C30 272 40 262 50 256C40 250 30 240 30 230C50 230 64 256 64 256Z"/>
+  </g>
+  
+  <!-- Green leaves mixed in -->
+  <g fill="url(#greenLeafV3)">
+    <path d="M360 100C360 100 380 80 400 100C380 120 360 100 360 100Z"/>
+    <path d="M412 360C412 360 432 340 452 360C432 380 412 360 412 360Z"/>
+    <path d="M152 412C152 412 132 432 112 412C132 392 152 412 152 412Z"/>
+    <path d="M100 152C100 152 80 132 100 112C120 132 100 152 100 152Z"/>
+  </g>
+  
+  <!-- Acorns -->
+  <g>
+    <!-- Acorn 1 -->
+    <ellipse cx="320" cy="80" rx="12" ry="16" fill="#92400E"/>
+    <path d="M308 72C308 72 320 64 332 72" stroke="#78350F" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <circle cx="316" cy="76" r="3" fill="#FEF3C7" fill-opacity="0.5"/>
+    
+    <!-- Acorn 2 -->
+    <ellipse cx="432" cy="320" rx="12" ry="16" fill="#92400E"/>
+    <path d="M420 312C420 312 432 304 444 312" stroke="#78350F" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <circle cx="428" cy="316" r="3" fill="#FEF3C7" fill-opacity="0.5"/>
+    
+    <!-- Acorn 3 -->
+    <ellipse cx="192" cy="432" rx="12" ry="16" fill="#92400E"/>
+    <path d="M180 424C180 424 192 416 204 424" stroke="#78350F" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <circle cx="188" cy="428" r="3" fill="#FEF3C7" fill-opacity="0.5"/>
+    
+    <!-- Acorn 4 -->
+    <ellipse cx="80" cy="192" rx="12" ry="16" fill="#92400E"/>
+    <path d="M68 184C68 184 80 176 92 184" stroke="#78350F" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <circle cx="76" cy="188" r="3" fill="#FEF3C7" fill-opacity="0.5"/>
+  </g>
+  
+  <!-- Small knots on branch -->
+  <circle cx="160" cy="120" r="8" fill="#451A03"/>
+  <circle cx="392" cy="160" r="6" fill="#451A03"/>
+  <circle cx="352" cy="392" r="7" fill="#451A03"/>
+  <circle cx="120" cy="352" r="6" fill="#451A03"/>
+  
+  <!-- Inner glow -->
+  <circle cx="256" cy="256" r="150" stroke="#FEF3C7" stroke-width="2" fill="none" opacity="0.2"/>
+</svg>

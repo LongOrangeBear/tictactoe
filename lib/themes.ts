@@ -46,7 +46,7 @@ export const themes: Record<ThemeId, Theme> = {
         },
         symbolIcons: {
             player: '/assets/icons/symbol_x_heart.svg',
-            computer: '/assets/icons/symbol_o_star.svg',
+            computer: '/assets/icons/symbol_o_bow.svg',
         },
         colors: {
             primary: 'hsl(340, 80%, 60%)',
@@ -79,8 +79,8 @@ export const themes: Record<ThemeId, Theme> = {
             computer: '✨',
         },
         symbolIcons: {
-            player: '/assets/icons/symbol_x_star.svg',
-            computer: '/assets/icons/symbol_o_sparkle.svg',
+            player: '/assets/icons/symbol_x_ring.svg',
+            computer: '/assets/icons/symbol_o_earring.svg',
         },
         colors: {
             primary: 'hsl(45, 90%, 55%)',
@@ -114,7 +114,7 @@ export const themes: Record<ThemeId, Theme> = {
         },
         symbolIcons: {
             player: '/assets/icons/symbol_x_clover.svg',
-            computer: '/assets/icons/symbol_o_leaf.svg',
+            computer: '/assets/icons/symbol_o_branch.svg',
         },
         colors: {
             primary: 'hsl(140, 60%, 45%)',

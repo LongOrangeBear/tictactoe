@@ -1,0 +1,43 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bowGradV1" x1="100" y1="100" x2="412" y2="412" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FECDD3"/>
+      <stop offset="50%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+    <filter id="glowBowV1" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Bow ribbon - forms O shape -->
+  <g filter="url(#glowBowV1)">
+    <!-- Left loop of bow -->
+    <ellipse cx="160" cy="256" rx="100" ry="120" stroke="url(#bowGradV1)" stroke-width="28" fill="none"/>
+    
+    <!-- Right loop of bow -->
+    <ellipse cx="352" cy="256" rx="100" ry="120" stroke="url(#bowGradV1)" stroke-width="28" fill="none"/>
+    
+    <!-- Center knot -->
+    <circle cx="256" cy="256" r="48" fill="url(#bowGradV1)"/>
+  </g>
+  
+  <!-- Ribbon tails -->
+  <path d="M256 304L220 420Q200 460 180 440L200 360L240 304" fill="#F472B6" opacity="0.8"/>
+  <path d="M256 304L292 420Q312 460 332 440L312 360L272 304" fill="#F472B6" opacity="0.8"/>
+  
+  <!-- Highlights on loops -->
+  <ellipse cx="120" cy="200" rx="24" ry="32" fill="white" fill-opacity="0.4"/>
+  <ellipse cx="392" cy="200" rx="24" ry="32" fill="white" fill-opacity="0.4"/>
+  
+  <!-- Center knot highlight -->
+  <circle cx="244" cy="244" r="16" fill="white" fill-opacity="0.5"/>
+  
+  <!-- Small heart in center -->
+  <path d="M256 268C256 268 244 260 244 252C244 248 248 244 252 244C254 244 256 246 256 248C256 246 258 244 260 244C264 244 268 248 268 252C268 260 256 268 256 268Z" fill="white"/>
+  
+  <!-- Sparkles -->
+  <path d="M100 140L106 120L126 114L106 108L100 88L94 108L74 114L94 120L100 140Z" fill="#FECDD3"/>
+  <path d="M412 140L418 120L438 114L418 108L412 88L406 108L386 114L406 120L412 140Z" fill="#FECDD3"/>
+</svg>

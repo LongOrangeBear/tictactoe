@@ -1,0 +1,47 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartGradV2" x1="100" y1="100" x2="412" y2="412" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDF2F8"/>
+      <stop offset="30%" stop-color="#F472B6"/>
+      <stop offset="70%" stop-color="#DB2777"/>
+      <stop offset="100%" stop-color="#831843"/>
+    </linearGradient>
+    <filter id="glowHeartV2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="embossV2">
+      <feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="20" lighting-color="white">
+        <fePointLight x="100" y="100" z="200"/>
+      </feSpecularLighting>
+    </filter>
+  </defs>
+  
+  <!-- Outer glow ring -->
+  <circle cx="256" cy="256" r="220" stroke="#F472B6" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Main Heart - Rounded plump style -->
+  <g filter="url(#glowHeartV2)">
+    <path d="M256 400
+             C256 400 60 260 60 160
+             C60 90 110 48 172 48
+             C220 48 252 88 256 104
+             C260 88 292 48 340 48
+             C402 48 452 90 452 160
+             C452 260 256 400 256 400Z" 
+          fill="url(#heartGradV2)"/>
+  </g>
+  
+  <!-- Glass highlight -->
+  <ellipse cx="150" cy="130" rx="48" ry="32" fill="white" fill-opacity="0.5"/>
+  <ellipse cx="180" cy="160" rx="20" ry="14" fill="white" fill-opacity="0.3"/>
+  
+  <!-- Inner curves -->
+  <path d="M160 170Q200 150 240 180" stroke="white" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M272 180Q312 150 352 170" stroke="white" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.4"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="256" cy="320" r="8" fill="white" fill-opacity="0.6"/>
+  <circle cx="230" cy="290" r="5" fill="white" fill-opacity="0.4"/>
+  <circle cx="282" cy="290" r="5" fill="white" fill-opacity="0.4"/>
+</svg>

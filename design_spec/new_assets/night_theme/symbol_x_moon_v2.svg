@@ -1,0 +1,59 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="moonGradV2" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="30%" stop-color="#DDD6FE"/>
+      <stop offset="70%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <radialGradient id="moonGlowV2" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </radialGradient>
+    <filter id="glowMoonV2" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Mystical aura -->
+  <circle cx="256" cy="256" r="220" fill="#8B5CF6" fill-opacity="0.1" filter="url(#glowMoonV2)"/>
+  <circle cx="256" cy="256" r="180" fill="#A78BFA" fill-opacity="0.1"/>
+  
+  <!-- Crescent moon - purple mystical style -->
+  <g filter="url(#glowMoonV2)">
+    <path d="M380 60C260 60 160 180 160 320C160 460 260 500 380 500C280 480 220 400 220 320C220 200 300 100 380 60Z" 
+          fill="url(#moonGlowV2)"/>
+  </g>
+  
+  <!-- Moon face detail - sleeping eye -->
+  <path d="M280 240C280 240 300 260 340 260" stroke="#7C3AED" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <circle cx="260" cy="250" r="4" fill="#7C3AED" opacity="0.3"/>
+  
+  <!-- Moon surface texture -->
+  <circle cx="300" cy="200" r="16" fill="#C4B5FD" fill-opacity="0.3"/>
+  <circle cx="340" cy="320" r="24" fill="#C4B5FD" fill-opacity="0.25"/>
+  <circle cx="280" cy="400" r="18" fill="#C4B5FD" fill-opacity="0.2"/>
+  
+  <!-- Highlight -->
+  <ellipse cx="260" cy="140" rx="48" ry="36" fill="white" fill-opacity="0.5"/>
+  <ellipse cx="300" cy="180" rx="20" ry="12" fill="white" fill-opacity="0.3"/>
+  
+  <!-- Enchanted stars -->
+  <g fill="#EDE9FE">
+    <path d="M100 100L110 76L134 66L110 56L100 32L90 56L66 66L90 76L100 100Z"/>
+    <path d="M80 340L88 322L106 316L88 310L80 292L72 310L54 316L72 322L80 340Z"/>
+    <path d="M140 460L148 442L166 436L148 430L140 412L132 430L114 436L132 442L140 460Z"/>
+  </g>
+  
+  <!-- Magical dust -->
+  <circle cx="120" cy="200" r="4" fill="#DDD6FE"/>
+  <circle cx="60" cy="280" r="3" fill="#EDE9FE"/>
+  <circle cx="100" cy="400" r="3" fill="#C4B5FD"/>
+  <circle cx="180" cy="500" r="4" fill="#DDD6FE" opacity="0.7"/>
+  <circle cx="60" cy="140" r="2" fill="white"/>
+  
+  <!-- Trailing sparkles -->
+  <path d="M420 200L424 188L436 184L424 180L420 168L416 180L404 184L416 188L420 200Z" fill="white" opacity="0.6"/>
+  <path d="M460 340L464 332L472 330L464 328L460 320L456 328L448 330L456 332L460 340Z" fill="#EDE9FE" opacity="0.5"/>
+</svg>

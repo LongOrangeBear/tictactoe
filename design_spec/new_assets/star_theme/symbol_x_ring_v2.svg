@@ -1,0 +1,56 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roseGoldV2" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDF4FF"/>
+      <stop offset="30%" stop-color="#F9A8D4"/>
+      <stop offset="70%" stop-color="#DB2777"/>
+      <stop offset="100%" stop-color="#9D174D"/>
+    </linearGradient>
+    <linearGradient id="rubyGradV2" x1="200" y1="60" x2="312" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+    <filter id="glowRingV2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Rose gold band -->
+  <g filter="url(#glowRingV2)">
+    <ellipse cx="256" cy="320" rx="170" ry="95" stroke="url(#roseGoldV2)" stroke-width="36" fill="none"/>
+    <ellipse cx="256" cy="320" rx="170" ry="95" stroke="white" stroke-width="4" stroke-dasharray="15 25" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- Crown setting -->
+  <path d="M180 200L200 240L256 260L312 240L332 200L312 180L256 160L200 180Z" fill="url(#roseGoldV2)"/>
+  <path d="M200 180L256 200L312 180" stroke="#FDF4FF" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Heart-shaped ruby -->
+  <g filter="url(#glowRingV2)">
+    <path d="M256 200
+             C256 200 200 160 200 120
+             C200 88 220 64 248 64
+             C264 64 256 80 256 80
+             C256 80 248 64 264 64
+             C292 64 312 88 312 120
+             C312 160 256 200 256 200Z" 
+          fill="url(#rubyGradV2)"/>
+  </g>
+  
+  <!-- Ruby highlight -->
+  <ellipse cx="224" cy="100" rx="16" ry="12" fill="white" fill-opacity="0.5"/>
+  <circle cx="240" cy="130" r="6" fill="white" fill-opacity="0.3"/>
+  
+  <!-- Small side diamonds -->
+  <path d="M168 160L160 148L152 160L160 172Z" fill="white"/>
+  <path d="M344 160L352 148L360 160L352 172Z" fill="white"/>
+  
+  <!-- Sparkles -->
+  <path d="M256 52L260 40L272 36L260 32L256 20L252 32L240 36L252 40L256 52Z" fill="white"/>
+  <circle cx="320" cy="100" r="4" fill="white" opacity="0.7"/>
+  
+  <!-- Ring band reflections -->
+  <ellipse cx="130" cy="300" rx="24" ry="14" fill="white" fill-opacity="0.35"/>
+</svg>

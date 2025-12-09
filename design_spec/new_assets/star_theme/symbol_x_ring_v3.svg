@@ -1,0 +1,55 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="platinumV3" x1="80" y1="80" x2="432" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="40%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="emeraldGradV3" x1="180" y1="40" x2="332" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D1FAE5"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#065F46"/>
+    </linearGradient>
+    <filter id="glowRingV3" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Platinum band with twist design -->
+  <g filter="url(#glowRingV3)">
+    <ellipse cx="256" cy="330" rx="175" ry="90" stroke="url(#platinumV3)" stroke-width="28" fill="none"/>
+    <!-- Twist pattern -->
+    <ellipse cx="256" cy="330" rx="175" ry="90" stroke="white" stroke-width="6" stroke-dasharray="20 40" fill="none" opacity="0.5"/>
+    <ellipse cx="256" cy="330" rx="160" ry="82" stroke="#94A3B8" stroke-width="2" fill="none" opacity="0.3"/>
+  </g>
+  
+  <!-- Ornate setting -->
+  <path d="M170 220C190 240 220 250 256 250C292 250 322 240 342 220L330 180L280 160L256 140L232 160L182 180Z" 
+        fill="url(#platinumV3)"/>
+  <path d="M182 180L232 200L256 180L280 200L330 180" stroke="white" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Emerald oval cut -->
+  <g filter="url(#glowRingV3)">
+    <ellipse cx="256" cy="100" rx="64" ry="48" fill="url(#emeraldGradV3)"/>
+    <!-- Emerald facet lines -->
+    <line x1="200" y1="100" x2="312" y2="100" stroke="#059669" stroke-width="2" opacity="0.5"/>
+    <line x1="256" y1="52" x2="256" y2="148" stroke="#059669" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="256" cy="100" rx="40" ry="28" stroke="#D1FAE5" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- Emerald highlights -->
+  <ellipse cx="228" cy="84" rx="20" ry="12" fill="white" fill-opacity="0.4"/>
+  <circle cx="220" cy="100" r="4" fill="white" fill-opacity="0.6"/>
+  
+  <!-- Accent diamonds -->
+  <path d="M160 140L152 128L144 140L152 152Z" fill="white" filter="url(#glowRingV3)"/>
+  <path d="M352 140L360 128L368 140L360 152Z" fill="white" filter="url(#glowRingV3)"/>
+  <circle cx="180" cy="180" r="8" fill="#E2E8F0"/>
+  <circle cx="332" cy="180" r="8" fill="#E2E8F0"/>
+  
+  <!-- Sparkle effects -->
+  <path d="M256 40L260 28L274 24L260 20L256 8L252 20L238 24L252 28L256 40Z" fill="white"/>
+  <path d="M140 100L144 92L152 90L144 88L140 80L136 88L128 90L136 92L140 100Z" fill="#D1FAE5" opacity="0.8"/>
+  <path d="M372 100L376 92L384 90L376 88L372 80L368 88L360 90L368 92L372 100Z" fill="#D1FAE5" opacity="0.8"/>
+</svg>
